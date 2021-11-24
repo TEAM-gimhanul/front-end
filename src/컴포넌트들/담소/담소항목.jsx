@@ -61,7 +61,7 @@ const 담소내용큰보자기 = 꾸미기.div`
 const 담소내용보자기 = 꾸미기.div`
   max-width: 80%;
   display: inline-block;
-  white-space: pre-wrap;
+  white-space: break-spaces;
   color: ${({ 유형 }) => (유형 === "너" ? "#242428" : "white")};
   padding: 8px 10px;
   background-color: ${({ 유형 }) =>
