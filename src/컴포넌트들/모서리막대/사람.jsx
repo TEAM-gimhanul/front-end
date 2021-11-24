@@ -5,9 +5,10 @@ const 전체테두리 = 꾸미기.div`
   position: relative;
   display: flex;
   width: 344px;
-  min-width: 344px;
+  max-width: 344px;
   padding: 0px 8px;
   height: 72px;
+  max-height: 72px;
   min-height: 72px;
   justify-content: start;
   align-items: center;
@@ -20,6 +21,9 @@ const 전체테두리 = 꾸미기.div`
     // 선택시 #d1dbff 으로
     background-color: #e0e7ff;
   }
+  @media only screen and (max-width: 900px) {
+    width: fit-content;
+  }
 `;
 
 const 내용테두리 = 꾸미기.div`
@@ -30,6 +34,9 @@ const 내용테두리 = 꾸미기.div`
   justify-content: center;
   margin-left: 8px;
   width: 72%;
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const 글테두리 = 꾸미기.div`
@@ -89,9 +96,12 @@ const 상태 = 꾸미기.div`
     height: 12px;
     border-radius: 50%;
     background-color: ${({ 상태 }) =>
-      상태 === "온라인" ? "#3acf5a" : "#b2b2b2"}
+      상태 === "온라인" ? "#3acf5a" : "#b2b2b2"};
   }
   // 온라인 : #3acf5a, 오프라인: #b2b2b2,
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
 `;
 
 const 사람 = ({ 데이터 }) => {
