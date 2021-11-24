@@ -1,7 +1,7 @@
-import 스타일 from "styled-components";
+import 꾸미기 from "styled-components";
 import { Avatar as 프로필 } from "@channel.io/bezier-react";
 
-const 전체테두리 = 스타일.div`
+const 전체테두리 = 꾸미기.div`
   position: relative;
   display: flex;
   width: 344px;
@@ -20,7 +20,7 @@ const 전체테두리 = 스타일.div`
   }
 `;
 
-const 내용테두리 = 스타일.div`
+const 내용테두리 = 꾸미기.div`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -30,7 +30,7 @@ const 내용테두리 = 스타일.div`
   width: 72%;
 `;
 
-const 글테두리 = 스타일.div`
+const 글테두리 = 꾸미기.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -38,7 +38,7 @@ const 글테두리 = 스타일.div`
   text-align: center;
 `;
 
-const 제목 = 스타일.div`
+const 제목 = 꾸미기.div`
   font-size: 0.9375rem;
   line-height: 1.3333;
   font-weight: bold;
@@ -51,7 +51,7 @@ const 제목 = 스타일.div`
   text-align: start;
 `;
 
-const 내용 = 스타일.div`
+const 내용 = 꾸미기.div`
   font-size: 0.8125rem;
   line-height: 1.2308;
   color: #262626;
@@ -64,7 +64,7 @@ const 내용 = 스타일.div`
   text-align: start;
 `;
 
-const 시간 = 스타일.div`
+const 시간 = 꾸미기.div`
   font-size: 0.8125rem;
   line-height: 1.2308;
   color: #999999;
@@ -74,7 +74,7 @@ const 시간 = 스타일.div`
   }
 `;
 
-const 상태 = 스타일.div`
+const 상태 = 꾸미기.div`
   position: absolute;
   right: 0;
   margin-right: 16px;

@@ -1,8 +1,8 @@
 import 사람 from "컴포넌트들/모서리막대/사람";
 import { atom as 상태, useRecoilState as 상태총괄갈고리 } from "recoil";
-import styled from "styled-components";
+import 꾸미기 from "styled-components";
 
-const 모서리막대테두리 = styled.div`
+const 모서리막대테두리 = 꾸미기.div`
   display: inline-flex;
   flex-direction: column;
   width: fit-content;
@@ -44,8 +44,10 @@ const 사람목록 = () => {
         순번: 3,
       },
       {
-        담소제목: "오픈채팅입니다 하하 오픈채팅입니다 하하 오픈채팅입니다 하하 오픈채팅입니다 하하",
-        담소내용: "하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이",
+        담소제목:
+          "오픈채팅입니다 하하 오픈채팅입니다 하하 오픈채팅입니다 하하 오픈채팅입니다 하하",
+        담소내용:
+          "하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이하이",
         담소시간: "방금",
         사용자프로필: "",
         사용자상태: "오프라인",
