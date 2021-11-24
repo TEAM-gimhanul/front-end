@@ -1,4 +1,5 @@
 import 색깔들 from "스타일들/색깔";
+import { colors } from "@semicolondsm/design-token";
 import { 주제상태 } from "저장소/주제저장소";
 import 주제받기 from "잡동사니/주제받기";
 import { useRecoilState as 상태총괄갈고리 } from "recoil";
@@ -17,7 +18,7 @@ const use주제 = () => {
     현재주제저장(1);
   };
 
-  const 주제 = 주제받기() ? 색깔들.밝음 : 색깔들.어둠;
+  const 주제 = 주제받기() ? colors.dark.scheme : colors.light.scheme;
 
   return [주제, 현재주제, 주제바꾸기];
 };

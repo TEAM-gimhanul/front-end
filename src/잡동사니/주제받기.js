@@ -4,9 +4,9 @@ const 주제받기 = () => {
     const 기기주제 = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
     if (기기주제) {
-      return 0;
+      return 1;
     }
-    return 1;
+    return 0;
   }
 
   const 주제 = Number(localStorage.getItem("주제"));
