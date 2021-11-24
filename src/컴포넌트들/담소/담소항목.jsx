@@ -16,5 +16,3 @@ const 담소항목 = () => {
 };
 
 export default 담소항목;
-
-const 
