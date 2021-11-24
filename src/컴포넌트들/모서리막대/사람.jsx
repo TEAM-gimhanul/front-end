@@ -1,12 +1,14 @@
 import 꾸미기 from "styled-components";
-import { Avatar as 프로필 } from "@channel.io/bezier-react";
+import { Avatar as 사진 } from "@channel.io/bezier-react";
 
 const 전체테두리 = 꾸미기.div`
   position: relative;
   display: flex;
   width: 344px;
+  min-width: 344px;
   padding: 0px 8px;
   height: 72px;
+  min-height: 72px;
   justify-content: start;
   align-items: center;
   text-align: center;
@@ -93,13 +95,13 @@ const 상태 = 꾸미기.div`
 `;
 
 const 사람 = ({ 데이터 }) => {
-  const { 담소제목, 담소내용, 담소시간, 사용자프로필, 사용자상태, 사용자이름 } =
+  const { 담소제목, 담소내용, 담소시간, 사용자사진, 사용자상태, 사용자이름 } =
     데이터;
   return (
     <전체테두리>
-      <프로필
+      <사진
         size={56}
-        avatarUrl={사용자프로필}
+        avatarUrl={사용자사진}
         name={사용자이름}
         showBorder={false}
         disabled={false}
