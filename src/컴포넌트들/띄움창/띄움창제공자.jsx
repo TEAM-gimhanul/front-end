@@ -1,4 +1,4 @@
-import { useRecoilValue as 전역상태관리값 } from "recoil";
+import { useRecoilValue as 전역상태관리값갈고리 } from "recoil";
 import 꾸미기 from "styled-components";
 import { 띄움창전역상태분자 } from "상태저장소/상태분자";
 import 입장띄움창 from "./띄움창들/입장띄움창";
