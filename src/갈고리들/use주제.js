@@ -1,4 +1,3 @@
-import 색깔들 from "스타일들/색깔";
 import { colors } from "@semicolondsm/design-token";
 import { 주제상태 } from "저장소/주제저장소";
 import 주제받기 from "잡동사니/주제받기";
