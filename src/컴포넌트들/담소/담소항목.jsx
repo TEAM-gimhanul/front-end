@@ -48,7 +48,7 @@ const 담소보자기 = 꾸미기.div`
 const 담소작성자이름 = 꾸미기.div`
   color: #242428;
   font-weight: 500;
-  color: rgba(0, 0, 0, 0.4);
+  color: ${({ theme }) => theme.색깔들.gray500};
   font-size: 13px;
   margin-left: 12px;
 `;
@@ -64,8 +64,8 @@ const 담소내용보자기 = 꾸미기.div`
   white-space: break-spaces;
   color: ${({ 유형 }) => (유형 === "너" ? "#242428" : "white")};
   padding: 8px 10px;
-  background-color: ${({ 유형 }) =>
-    유형 === "너" ? "rgba(0, 0, 0, 0.05)" : "rgb(148, 59, 251)"};
+  background-color: ${({ 유형, theme }) =>
+    유형 === "너" ? theme.색깔들.gray100 : theme.색깔들.indigo400};
   margin-top: 5px;
   border-radius: 18px;
   font-weight: 500;

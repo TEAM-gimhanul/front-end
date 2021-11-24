@@ -6,6 +6,9 @@ import { reset as 초기화 } from "styled-reset";
  */
 const 전역꾸미기 = 전역꾸미기생성`
     ${초기화};
+    body {
+        background-color: ${({ theme }) => theme.색깔들.white}
+    } 
 `;
 
 export default 전역꾸미기;
