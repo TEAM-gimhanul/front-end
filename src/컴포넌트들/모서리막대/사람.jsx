@@ -27,6 +27,7 @@ const 내용테두리 = 스타일.div`
   align-items: start;
   justify-content: center;
   margin-left: 8px;
+  width: 72%;
 `;
 
 const 글테두리 = 스타일.div`
@@ -42,6 +43,12 @@ const 제목 = 스타일.div`
   line-height: 1.3333;
   font-weight: bold;
   color: #262626;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+  text-align: start;
 `;
 
 const 내용 = 스타일.div`
@@ -49,6 +56,12 @@ const 내용 = 스타일.div`
   line-height: 1.2308;
   color: #262626;
   padding-right: 4px;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  text-align: start;
 `;
 
 const 시간 = 스타일.div`
