@@ -36,6 +36,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@channel.io/bezier-react", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:0.9.3"],
+            ["@semicolondsm/design-token", "npm:1.0.6"],
             ["@testing-library/jest-dom", "npm:5.15.1"],
             ["@testing-library/react", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:11.2.7"],
             ["@testing-library/user-event", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:12.8.3"],
@@ -4719,6 +4720,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [
             "@types/rollup",
             "rollup"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@semicolondsm/design-token", [
+        ["npm:1.0.6", {
+          "packageLocation": "./.yarn/cache/@semicolondsm-design-token-npm-1.0.6-638e12a850-fdecdaae73.zip/node_modules/@semicolondsm/design-token/",
+          "packageDependencies": [
+            ["@semicolondsm/design-token", "npm:1.0.6"]
           ],
           "linkType": "HARD",
         }]
@@ -10953,6 +10963,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["gimhanul-front", "workspace:."],
             ["@channel.io/bezier-react", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:0.9.3"],
+            ["@semicolondsm/design-token", "npm:1.0.6"],
             ["@testing-library/jest-dom", "npm:5.15.1"],
             ["@testing-library/react", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:11.2.7"],
             ["@testing-library/user-event", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:12.8.3"],

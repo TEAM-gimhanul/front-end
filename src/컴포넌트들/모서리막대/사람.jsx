@@ -1,5 +1,6 @@
 import 꾸미기 from "styled-components";
 import { Avatar as 사진 } from "@channel.io/bezier-react";
+import 주제받기 from "잡동사니/주제받기";
 
 const 전체테두리 = 꾸미기.div`
   position: relative;
@@ -17,9 +18,11 @@ const 전체테두리 = 꾸미기.div`
   cursor: pointer;
   border-radius: 15px;
   margin: 6px;
+  background-color: ${({ theme }) => theme.색깔들.white};
   &:hover {
-    // 선택시 #d1dbff 으로
-    background-color: #e0e7ff;
+    // 선택시 purple50 으로
+    background-color: ${(props) =>
+      props.주제 ? props.theme.색깔들.gray700 : props.theme.색깔들.indigo50};
   }
   @media only screen and (max-width: 900px) {
     width: fit-content;
@@ -51,7 +54,7 @@ const 제목 = 꾸미기.div`
   font-size: 0.9375rem;
   line-height: 1.3333;
   font-weight: bold;
-  color: #262626;
+  color: ${({ theme }) => theme.색깔들.gray900};
   display: block;
   white-space: nowrap;
   overflow: hidden;
@@ -63,7 +66,7 @@ const 제목 = 꾸미기.div`
 const 내용 = 꾸미기.div`
   font-size: 0.8125rem;
   line-height: 1.2308;
-  color: #262626;
+  color: ${({ theme }) => theme.색깔들.gray900};
   padding-right: 4px;
   display: block;
   white-space: nowrap;
@@ -76,7 +79,7 @@ const 내용 = 꾸미기.div`
 const 시간 = 꾸미기.div`
   font-size: 0.8125rem;
   line-height: 1.2308;
-  color: #999999;
+  color: ${({ theme }) => theme.색깔들.gray500};
   &::before {
     content: "•";
     margin-right: 4px;
@@ -89,26 +92,30 @@ const 상태 = 꾸미기.div`
   margin-right: 16px;
   width: 12px;
   height: 12px;
-  border: 2px solid #ebebeb;
+  border: 2px solid ${({ theme }) => theme.색깔들.gray200};
   border-radius: 50%;
   & > div {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: ${({ 상태 }) =>
-      상태 === "온라인" ? "#3acf5a" : "#b2b2b2"};
+    background-color: ${(props) =>
+      props.상태 === "온라인"
+        ? props.theme.색깔들.green500
+        : props.theme.색깔들.gray400};
   }
-  // 온라인 : #3acf5a, 오프라인: #b2b2b2,
+  // 온라인 : #3acf5a, 오프라인: gray400,
   @media only screen and (max-width: 900px) {
     display: none;
   }
 `;
 
 const 사람 = ({ 데이터 }) => {
+  const 현재주제 = 주제받기();
   const { 담소제목, 담소내용, 담소시간, 사용자사진, 사용자상태, 사용자이름 } =
     데이터;
+
   return (
-    <전체테두리>
+    <전체테두리 주제={현재주제}>
       <사진
         size={56}
         avatarUrl={사용자사진}
