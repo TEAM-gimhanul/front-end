@@ -1,14 +1,14 @@
-import 사람 from "컴포넌트들/모서리막대/사람";
-import 꾸미기 from "styled-components";
-import { atom as 상태, useRecoilState as 상태총괄갈고리 } from "recoil";
 import { useLayoutEffect } from "react";
+import 꾸미기 from "styled-components";
+import 사람 from "컴포넌트들/모서리막대/사람";
+import { atom as 상태, useRecoilState as 상태총괄갈고리 } from "recoil";
 
 const 모서리막대테두리 = 꾸미기.div`
-  position: sticky;
   display: inline-flex;
   flex-direction: column;
-  width: fit-content;
-  height: 100vh;
+  min-width: fit-content;
+  height: 100%;
+  overflow-y: scroll
 `;
 
 const 사람목록 = () => {
