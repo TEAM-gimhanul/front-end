@@ -1,6 +1,6 @@
 import 꾸미기 from "styled-components";
 import { Avatar as 사진 } from "@channel.io/bezier-react";
-import 주제받기 from "잡동사니/주제받기";
+import 사용주제갈고리 from "갈고리들/use주제";
 
 const 전체테두리 = 꾸미기.div`
   position: relative;
@@ -99,9 +99,7 @@ const 상태 = 꾸미기.div`
     height: 12px;
     border-radius: 50%;
     background-color: ${(props) =>
-      props.상태 
-        ? props.theme.색깔들.green500
-        : props.theme.색깔들.gray400};
+      props.상태 ? props.theme.색깔들.green500 : props.theme.색깔들.gray400};
   }
   // 1 : #3acf5a, 0: gray400,
   @media only screen and (max-width: 900px) {
@@ -110,7 +108,7 @@ const 상태 = 꾸미기.div`
 `;
 
 const 사람 = ({ 인자 }) => {
-  const 현재주제 = 주제받기();
+  const [, 현재주제] = 사용주제갈고리();
   const { 담소명, 접속중, 담소목록 } = 인자;
 
   return (
