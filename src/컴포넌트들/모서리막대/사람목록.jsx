@@ -9,9 +9,8 @@ const 모서리막대테두리 = styled.div`
   height: 100%;
   overflow-y: scroll;
   & > :nth-child(2) {
-    margin-top: 86px;
     @media only screen and (max-width: 900px) {
-      margin-top: 170px;
+      margin-top: 76px;
     }
   }
 `;
@@ -407,12 +406,14 @@ const 사람목록 = () => {
   ];
 
   return (
-    <모서리막대테두리>
+    <>
       <선두 />
-      {담소상태.map((담소) => {
-        return <사람 key={담소.담소목록[0].생성일} 인자={담소} />;
-      })}
-    </모서리막대테두리>
+      <모서리막대테두리>
+        {담소상태.map((담소) => {
+          return <사람 key={담소.담소목록[0].생성일} 인자={담소} />;
+        })}
+      </모서리막대테두리>
+    </>
   );
 };
 export default 사람목록;
