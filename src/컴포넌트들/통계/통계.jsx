@@ -3,16 +3,17 @@ import 꾸미기 from "styled-components";
 import * as 얍 from "./통계수치";
 
 const 더큰보자기 = 꾸미기.div`
-width; 100%;
-display: flex;
-justify-content: center;
-align-items: center;
+  width; 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 const 큰보자기 = 꾸미기.div`
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-direction: column
+  flex-direction: column;
+  margin-left: 20vh;
 `;
 const 이응하나 = () => {
   return (
@@ -184,15 +185,15 @@ const 통계 = () => {
         <네모4><요하나 /></네모4>
       </보자기둘>
       <보자기셋>
-      <네모5><요둘 /></네모5>
+        <네모5><요둘 /></네모5>
       </보자기셋>
       <보자기넷>
         <네모5><이응넷 /></네모5>
         <네모6><요셋 /></네모6>
       </보자기넷>
     </큰보자기>
-    <얍.막대보자기>
-    {/* 임시로 텍스트로 작성 */}
+      <얍.막대보자기>
+      {/* 임시로 텍스트로 작성 */}
         <얍.막대1>욕한 횟수 : 4</얍.막대1>
         <얍.막대2>Top 1. 바보</얍.막대2>
         <얍.막대3>Top 2. 멍청이</얍.막대3>
