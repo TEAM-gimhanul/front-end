@@ -27,7 +27,7 @@ const 더큰보자기 = 꾸미기.div`
   align-items: center;
   @media screen and (max-width: 700px) {
     margin-top: 20vh;
-    margin-left: 2vh;
+    margin-left: 3.5vh;
     flex-direction: column;
     overflow-x:hidden;
   }
@@ -42,6 +42,7 @@ const 큰보자기 = 꾸미기.div`
   margin-left: 20vh;
   @media screen and (max-width: 700px) {
     margin: 0;
+    margin-right: -15vw;
   }
 `;
 
@@ -148,6 +149,14 @@ margin-top: 16.4vh;
     margin-top: 1vh;
     margin-left: 1vh;
   }
+  @media screen and (max-width: 700px) {
+    margin-left: 3vh;
+    margin-right:0vh;
+    margin-top: 18vh;
+    .사 {
+      display: none;
+    }
+  }
 `;
 const 네모2 = 꾸미기.div`
 display: flex;
@@ -169,6 +178,12 @@ margin-right: -17.2vh;
     margin-top: 1vh;
     margin-left: 1vh;
   }
+  @media screen and (max-width: 700px) {
+    margin-bottom: 18.5vh;
+    .사 {
+      display: none;
+    }
+  }
 `;
 const 네모4 = 꾸미기.div`
 margin-right:0.5vh;
@@ -181,23 +196,35 @@ margin-right:0.5vh;
   }
 `;
 const 네모5 = 꾸미기.div`
-display: flex;
-  margin-left: 15.8vh;
+  display: flex;
+  margin-left: 8.3vw;
   div {
     width: 30px; height: 30px;
     background-color:#87878787;
     margin-top: 1.5vh;
     margin-left: 1.1vh;
   }
+  @media screen and (max-width: 700px) {
+    margin-left: 23vw;
+    margin-right: -9.8vw;
+    .칠, .팔 {
+      display: none;
+    }
+  }
 `;
 const 네모6 = 꾸미기.div`
-margin-left: -4vh;
+  margin-left: -4vh;
   margin-top:4.7vh;
   div {
     width: 30px; height: 30px;
     background-color:#87878787;
     margin-top: 1vh;
     margin-left: 1vh;
+  }
+  @media screen and (max-width: 700px) {
+    margin-left: 0;
+    margin-top: 5.3vh;
+    margin-right: -11vw;
   }
 `;
 const 통계 = () => {
