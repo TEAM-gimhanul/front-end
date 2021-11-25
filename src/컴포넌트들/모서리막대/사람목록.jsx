@@ -9,6 +9,7 @@ const 모서리막대테두리 = styled.div`
   height: 100%;
   overflow-y: scroll;
   -ms-overflow-style: none;
+  border-right: 1px solid ${({theme}) => theme.색깔들.gray300};
   ::-webkit-scrollbar {
     display: none;
   }
