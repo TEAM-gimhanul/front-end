@@ -7,6 +7,10 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 margin-right: -70vh;
+@media screen and (max-width: 700px) {
+  margin: 0;
+  margin-right: 8.5vh;
+}
 `;
 export const 막대1 = 꾸미기.div`
 margin-left: 15vh;
@@ -18,8 +22,18 @@ margin-left: 15vh;
   justify-content: center;
   align-items: center;
   color: white;
+@media screen and (max-width: 700px) {
+  margin-right: -15vh;
+  width: 30vh;
+  height: 5vh;
+}
 `;
 export const 막대2 = 꾸미기.div`
+@media screen and (max-width: 700px) {
+  margin-top: 3vh;
+  width: 50vw;
+  height: 3vh;
+}
 margin-top: 15vh;
   margin-left: 15vh;
   width: 30vw;
@@ -32,6 +46,11 @@ margin-top: 15vh;
   color: white;
 `;
 export const 막대3 = 꾸미기.div`
+@media screen and (max-width: 700px) {
+  margin-top: 1vh;
+  width: 30vw;
+  height: 3vh;
+}
 margin-left: 15vh;
 margin-top: 3vh;
   width: 20vw;
@@ -44,6 +63,11 @@ margin-top: 3vh;
   color: white;
 `;
 export const 막대4 = 꾸미기.div`
+@media screen and (max-width: 700px) {
+  margin-top: 1vh;
+  width: 20vw;
+  height: 3vh;
+}
 margin-left: 15vh;
 margin-top: 3vh;
   width: 9vw;

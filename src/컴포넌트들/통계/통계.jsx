@@ -7,6 +7,12 @@ const 더큰보자기 = 꾸미기.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 700px) {
+    margin-top: 20vh;
+    margin-left: 2vh;
+    flex-direction: column;
+    overflow-x:hidden;
+  }
 `;
 const 큰보자기 = 꾸미기.div`
   width: 100%;
@@ -14,6 +20,9 @@ const 큰보자기 = 꾸미기.div`
   justify-content: center;
   flex-direction: column;
   margin-left: 20vh;
+  @media screen and (max-width: 700px) {
+    margin: 0;
+  }
 `;
 const 이응하나 = () => {
   return (
