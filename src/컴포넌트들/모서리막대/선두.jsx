@@ -2,6 +2,8 @@ import styled from "styled-components";
 import 주제받기 from "잡동사니/주제받기";
 
 const 보자기 = styled.div`
+  position: fixed;
+  z-index: 99;
   width: 344px;
   min-height: 60px;
   height: 60px;
@@ -16,11 +18,11 @@ const 보자기 = styled.div`
   @media only screen and (max-width: 900px) {
     width: 72px;
     min-height: 144px;
-    padding: 0px 8px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 6px;
+    padding: 0px 8px;
+    margin: 0px 6px;
   }
 `;
 
