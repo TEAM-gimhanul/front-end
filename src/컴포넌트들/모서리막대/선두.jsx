@@ -134,7 +134,7 @@ const 선두 = ({ 소통구멍 }) => {
             onMouseLeave={function noRefCheck() {}}
             size={24}
           />
-          <사용자이름>안은결</사용자이름>
+          <사용자이름>{userCache.name}</사용자이름>
         </사진보자기>
         <로그아웃단추 onClick={로그아웃실행}></로그아웃단추>
       </단추보자기>
