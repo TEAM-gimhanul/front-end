@@ -1,9 +1,9 @@
 import React from "react";
 import 주제받기 from "잡동사니/주제받기";
-import styled from "styled-components";
+import 꾸미기 from "styled-components";
 import { Avatar as 사진 } from "@channel.io/bezier-react";
 
-const 보자기 = styled.div`
+const 보자기 = 꾸미기.div`
   width: 100%;
   height: 72px;
   background-color: ${({ theme }) => theme.색깔들.white};
@@ -14,7 +14,7 @@ const 보자기 = styled.div`
   align-items: center;
 `;
 
-const 묶음 = styled.div`
+const 묶음 = 꾸미기.div`
   display: flex;
   justify-content: left;
   align-items: center;
@@ -24,7 +24,7 @@ const 묶음 = styled.div`
   margin-left: 12px;
 `;
 
-const 글자 = styled.div`
+const 글자 = 꾸미기.div`
   margin-left: 1vh;
   font-weight: 600;
   line-height: 1.1765;
