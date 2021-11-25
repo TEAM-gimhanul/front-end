@@ -11,7 +11,7 @@ const 소통구멍갈고리 = () => {
         origin: "*",
       },
       query: {
-        authorization: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMTQ1NCwiZXhwIjoxNjM3ODM4MzU0fQ.DMOcVt1_SiYkWbTAosX-GAJa_UpW1ovb4t8qQyjzYLw`,
+        authorization: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMzMwOCwiZXhwIjoxNjM3ODQwMjA4fQ.VS22-Dc_6axwV0QQmRl58_c2y_ORmxe7PDo1xt63w3g`,
       },
     });
   }, [소통구멍참조]);
