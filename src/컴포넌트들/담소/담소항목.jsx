@@ -2,7 +2,7 @@ import { Avatar as 사진 } from "@channel.io/bezier-react";
 import 꾸미기 from "styled-components";
 
 const 담소항목 = (인자) => {
-  const { 사용자사진, 사용자이름, 담소내용, 생성일 } = 인자;
+  const { 사용자사진, name, message, 생성일 } = 인자;
   const 유형 = "너";
   return (
     <보자기 유형={유형}>
@@ -10,7 +10,7 @@ const 담소항목 = (인자) => {
         <사진보자기>
           <사진
             avatarUrl={사용자사진}
-            name={사용자이름}
+            name={name}
             onClick={function noRefCheck() {}}
             onMouseEnter={function noRefCheck() {}}
             onMouseLeave={function noRefCheck() {}}
@@ -19,9 +19,9 @@ const 담소항목 = (인자) => {
         </사진보자기>
       )}
       <담소보자기>
-        {유형 === "너" && <담소작성자이름>{담소내용}</담소작성자이름>}
+        {유형 === "너" && <담소작성자이름>{name}</담소작성자이름>}
         <담소내용큰보자기>
-          <담소내용보자기>{담소내용}</담소내용보자기>
+          <담소내용보자기>{message}</담소내용보자기>
         </담소내용큰보자기>
       </담소보자기>
     </보자기>

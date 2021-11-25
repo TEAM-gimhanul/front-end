@@ -1,6 +1,7 @@
 import 꾸미기 from "styled-components";
 import { Avatar as 사진 } from "@channel.io/bezier-react";
 import 사용주제갈고리 from "갈고리들/use주제";
+import { useNavigate as 사용항해 } from "react-router";
 
 const 전체테두리 = 꾸미기.div`
   position: relative;
@@ -18,7 +19,7 @@ const 전체테두리 = 꾸미기.div`
   cursor: pointer;
   border-radius: 15px;
   margin: 6px;
-  background-color: transparent;
+  background-color:  transparent;
   &:hover {
     // 선택시 purple50 으로
     background-color: ${(props) =>
@@ -108,26 +109,27 @@ const 상태 = 꾸미기.div`
 `;
 
 const 사람 = ({ 인자 }) => {
+  const 항해 = 사용항해();
   const [, 현재주제] = 사용주제갈고리();
-  const { 담소명, 접속중, 담소목록 } = 인자;
+  const { roomId, name, profileImage } = 인자;
 
   return (
-    <전체테두리 주제={현재주제}>
+    <전체테두리 onClick={() => 항해(`/chat/${roomId}`)} 주제={현재주제}>
       <사진
         size={56}
-        avatarUrl={담소목록[0].사용자사진}
-        name={담소목록[0].사용자이름}
+        avatarUrl={profileImage}
+        name={name}
         showBorder={false}
         disabled={false}
       />
       <내용테두리>
-        <제목>{담소명}</제목>
+        <제목>{name}</제목>
         <글테두리>
-          <내용>{담소목록[0].담소내용}</내용>
-          <시간>{담소목록[0].생성일}</시간>
+          <내용>"없다고하자"</내용>
+          <시간>3시간</시간>
         </글테두리>
       </내용테두리>
-      <상태 상태={접속중 ? 1 : 0}>
+      <상태 상태={1}>
         <div />
       </상태>
     </전체테두리>

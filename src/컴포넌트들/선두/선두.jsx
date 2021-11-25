@@ -37,25 +37,19 @@ const 잡동사니보자기 = 꾸미기.div`
   padding: 0 10px;
 `;
 
-const 담소_정보 = {
-  사용자사진:
-    "https://cf.channel.io/thumb/200x200/pub-file/1/606d87d059a6093594c0/ch-symbol-filled-smiley-bg.png",
-  사용자이름: "신중빈",
-};
-
-const 선두 = () => {
+const 선두 = ({ name, profileImage }) => {
   const [, 현재주제, 주제바꾸기] = 사용주제갈고리();
   return (
     <보자기 주제={현재주제}>
       <묶음>
         <사진
           size={42}
-          avatarUrl={담소_정보.사용자사진}
-          name={담소_정보.사용자이름}
+          avatarUrl={profileImage}
+          name={name}
           showBorder={false}
           disabled={false}
         />
-        <글자>{담소_정보.사용자이름}</글자>
+        <글자>{name}</글자>
       </묶음>
       <잡동사니보자기>
         <똑딱이 값={현재주제} 똑딱={주제바꾸기} />
