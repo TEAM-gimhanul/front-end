@@ -114,12 +114,14 @@ const 상태 = 꾸미기.div`
 
 const 사람 = ({ 인자 }) => {
   const 항해 = 사용항해();
+  const [접속, 접속선언] = 상태선언();
   const [, 현재주제] = 사용주제갈고리();
   const { roomId, name, profileImage } = 인자;
-  const [접속, 접속선언] = 상태선언();
+
   반짝틀이잡히기전(() => {
     접속선언(접속중());
   }, []);
+
   return (
     <전체테두리 onClick={() => 항해(`/chat/${roomId}`)} 주제={현재주제}>
       <사진
