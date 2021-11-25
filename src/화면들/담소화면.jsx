@@ -1,8 +1,19 @@
 import 선두 from "컴포넌트들/선두/선두";
 import 꾸미기 from "styled-components";
 import 담소목록 from "../컴포넌트들/담소/담소목록";
+import 글자받기 from "컴포넌트들/글자받기/글자받기";
+import { useParams } from "react-router";
+import { useEffect } from "react";
 
-const 담소화면 = () => {
+const 담소화면 = ({ 소통구멍 }) => {
+  const { id } = useParams();
+  const 담소보내기 = (담소) => {
+    const 정보 = {
+      roomId: id,
+      message: 담소,
+    };
+    소통구멍.current.emit("message", 정보);
+  };
   return (
     <담소나누기보자기>
       <선두 />
@@ -16,6 +27,7 @@ const 담소화면 = () => {
           },
         ]}
       />
+      <글자받기 담소보내기={담소보내기} />
     </담소나누기보자기>
   );
 };
@@ -26,4 +38,6 @@ const 담소나누기보자기 = 꾸미기.div`
   width: 100%;
   height: 100%;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
 `;
