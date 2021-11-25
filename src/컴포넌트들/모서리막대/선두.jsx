@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import 주제받기 from "잡동사니/주제받기";
+import 사용주제갈고리 from "갈고리들/use주제";
 
 const 보자기 = styled.div`
   position: fixed;
@@ -61,7 +61,7 @@ const 단추 = styled.div`
 `;
 
 const 선두 = () => {
-  const 현재주제 = 주제받기();
+  const [, 현재주제] = 사용주제갈고리();
   return (
     <보자기 주제={현재주제}>
       <단추보자기>
