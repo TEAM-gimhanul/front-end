@@ -116,7 +116,7 @@ const 사람 = ({ 인자, 보여주기 }) => {
   const 항해 = 사용항해();
   const [접속, 접속선언] = 상태선언();
   const [, 현재주제] = 사용주제갈고리();
-  const { roomId, name, profileImage } = 인자;
+  const { roomId, name, profileImage, online, lastMessage } = 인자;
 
   반짝틀이잡히기전(() => {
     접속선언(접속중());
@@ -137,9 +137,9 @@ const 사람 = ({ 인자, 보여주기 }) => {
       />
       <내용테두리>
         <제목>{name}</제목>
-        <글테두리></글테두리>
+        <글테두리>{lastMessage}</글테두리>
       </내용테두리>
-      <상태 상태={접속}>
+      <상태 상태={online}>
         <div />
       </상태>
     </전체테두리>
