@@ -12,7 +12,9 @@ const 담소화면 = ({ 소통구멍 }) => {
   const [사용자들, 사용자들정의] = 상태총괄갈고리(사용자상태분자);
   const [담소들, 선언담소목록] = 상태총괄갈고리(담소상태분자(id));
   useEffect(() => {
-    소통구멍.current.on("message", (담소) => 선언담소목록([...담소들, 담소]));
+    if (localStorage.getItem("access_token")) {
+      소통구멍.current.on("message", (담소) => 선언담소목록([...담소들, 담소]));
+    }
   }, [id]);
 
   const getCurrentRoom = () => {
@@ -23,6 +25,7 @@ const 담소화면 = ({ 소통구멍 }) => {
       roomId: id,
       message: 담소,
     };
+
     소통구멍.current.emit("message", 정보);
   };
   return (
