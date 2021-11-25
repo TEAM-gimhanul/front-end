@@ -127,14 +127,14 @@ const 선두 = ({ 소통구멍, 보여주기 }) => {
       <단추보자기>
         <사진보자기>
           <Avatar
-            avatarUrl={userCache.profileImage}
-            name={userCache.name}
+            avatarUrl={userCache?.profileImage}
+            name={userCache?.name}
             onClick={function noRefCheck() {}}
             onMouseEnter={function noRefCheck() {}}
             onMouseLeave={function noRefCheck() {}}
             size={24}
           />
-          <사용자이름>{userCache.name}</사용자이름>
+          <사용자이름>{userCache?.name}</사용자이름>
         </사진보자기>
         <로그아웃단추 onClick={로그아웃실행}></로그아웃단추>
       </단추보자기>
