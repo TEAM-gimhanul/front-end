@@ -2,21 +2,49 @@ import styled from "styled-components";
 import 대표 from "자산들/로고.png";
 import 어두운대표 from "자산들/다크로고.png";
 import 사용주제갈고리 from "갈고리들/use주제";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { 기본_끝점 } from "구성들/구성";
 
 const 로그인 = () => {
   const [, 현재주제] = 사용주제갈고리();
+  const [유얼엘, 선언유얼엘] = useState({
+    naver: "",
+    kakao: "",
+    google: "",
+  });
+  const getLoginURL = async (type) => {
+    const { data } = await axios.get(`${기본_끝점}/users/${type}`);
+    return data;
+  };
+  const getAllLoginURL = async () => {
+    const [naver, kakao, google] = await Promise.all([
+      getLoginURL("naver"),
+      getLoginURL("kakao"),
+      getLoginURL("google"),
+    ]);
+    const 유얼엘들 = {
+      naver,
+      kakao,
+      google,
+    };
+    선언유얼엘(유얼엘들);
+  };
+  useEffect(() => {
+    getAllLoginURL();
+  }, []);
   return (
     <>
       <로그인테두리>
         <로고 src={현재주제 ? 어두운대표 : 대표} alt="김한울" />
         <로그인버튼테두리>
-          <로그인아이템 href="#" 종류="구글">
+          <로그인아이템 href={유얼엘.google} 종류="구글">
             구글 로그인
           </로그인아이템>
-          <로그인아이템 href="#" 종류="네이버">
+          <로그인아이템 href={유얼엘.naver} 종류="네이버">
             네이버 로그인
           </로그인아이템>
-          <로그인아이템 href="#" 종류="카카오">
+          <로그인아이템 href={유얼엘.kakao} 종류="카카오">
             카카오 로그인
           </로그인아이템>
         </로그인버튼테두리>
