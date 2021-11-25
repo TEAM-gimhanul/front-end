@@ -12,7 +12,7 @@ const 큰보자기 = 꾸미기.div`
 const 회색보자기 = 꾸미기.div`
   width: 80%; height: 50px;
   border-radius: 100px;
-  background-color: ${(props) => (props.주제 ? "#9E9E9E" : "rgb(247,247,247)")};
+  background-color: ${(props) => (props.주제 ? "#616161" : "rgb(247,247,247)")};
   display: flex;
   justify-content: left;
   align-items: center;
