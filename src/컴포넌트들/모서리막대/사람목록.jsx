@@ -14,6 +14,7 @@ const 모서리막대테두리 = 꾸미기.div`
   overflow-y: scroll;
   padding-bottom: 70px;
   -ms-overflow-style: none;
+  box-sizing: border-box;
   border-right: 1px solid ${({ theme, 주제 }) =>
     주제 ? theme.색깔들.gray800 : theme.색깔들.gray300};
   ::-webkit-scrollbar {
