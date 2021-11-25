@@ -34,7 +34,7 @@ const 사람목록 = ({ 소통구멍 }) => {
     try {
       const { data } = await axios.get(`${기본_끝점}/rooms`, {
         headers: {
-          Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgyMzcyNCwiZXhwIjoxNjM3ODMwNjI0fQ.jTDaoiX2VZ70YOEz4oZvjOnK9Y79Xhyqo032luoqrLg`,
+          Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMTQ1NCwiZXhwIjoxNjM3ODM4MzU0fQ.DMOcVt1_SiYkWbTAosX-GAJa_UpW1ovb4t8qQyjzYLw`,
           "Access-Control-Allow-Origin": "*",
         },
       });
