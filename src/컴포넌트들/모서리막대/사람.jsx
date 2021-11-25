@@ -19,7 +19,7 @@ const 전체테두리 = 꾸미기.div`
   cursor: pointer;
   border-radius: 15px;
   margin: 6px;
-  background-color: transparent;
+  background-color:  transparent;
   &:hover {
     // 선택시 purple50 으로
     background-color: ${(props) =>
@@ -111,15 +111,13 @@ const 상태 = 꾸미기.div`
 const 사람 = ({ 인자 }) => {
   const 항해 = 사용항해();
   const [, 현재주제] = 사용주제갈고리();
-  const { roomId, name } = 인자;
-  const 사진주소 =
-    "https://cf.channel.io/thumb/200x200/pub-file/1/606d87d059a6093594c0/ch-symbol-filled-smiley-bg.png";
+  const { roomId, name, profileImage } = 인자;
 
   return (
     <전체테두리 onClick={() => 항해(`/chat/${roomId}`)} 주제={현재주제}>
       <사진
         size={56}
-        avatarUrl={사진주소}
+        avatarUrl={profileImage}
         name={name}
         showBorder={false}
         disabled={false}
