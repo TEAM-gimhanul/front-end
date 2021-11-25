@@ -1,5 +1,6 @@
 import 꾸미기 from "styled-components";
 import 사용주제갈고리 from "갈고리들/use주제";
+import 띄움창갈고리 from "갈고리들/띄움창갈고리"
 import { useNavigate as 사용항해 } from "react-router";
 import use사용자목록갈고리 from "갈고리들/사용자목록갈고리";
 
@@ -16,8 +17,7 @@ const 보자기 = 꾸미기.div`
   padding: 6px 14px;
   flex-direction: row;
   background-color: ${({ theme }) => theme.색깔들.white};
-  box-shadow: 0 17px 20px -18px ${(props) =>
-    props.주제 ? props.theme.색깔들.gray800 : props.theme.색깔들.gray200};
+  box-shadow: 0 17px 20px -18px ${props => (props.주제 ? props.theme.색깔들.gray800 : props.theme.색깔들.gray200)};
   @media only screen and (max-width: 900px) {
     width: 62px;
     min-height: 144px;
@@ -68,7 +68,11 @@ const 선두 = ({ 소통구멍 }) => {
   const 항해 = 사용항해();
   const [, 현재주제] = 사용주제갈고리();
   const [, , 유저목록받아오기] = use사용자목록갈고리();
-
+  const { 띄움창나타내기 } = 띄움창갈고리();
+  const 외부인증띄움창조작 = () => {
+    띄움창나타내기("외부인증띄움창");
+  };
+  
   const 무작위만남클릭 = async () => {
     await 소통구멍.current.emit("join");
     await 소통구멍.current.once("room", (data) => {
@@ -81,7 +85,7 @@ const 선두 = ({ 소통구멍 }) => {
   return (
     <보자기 주제={현재주제}>
       <단추보자기>
-        <단추>로그인</단추>
+        <단추 onClick={() => 외부인증띄움창조작()}>로그인</단추>
         <단추 onClick={무작위만남클릭}>랜덤매칭</단추>
       </단추보자기>
     </보자기>

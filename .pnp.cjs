@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:12.8.3"],
             ["axios", "npm:0.24.0"],
             ["eslint-config-react-app", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:6.0.0"],
+            ["query-string", "npm:7.0.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:17.0.2"],
             ["react-is", "npm:17.0.2"],
@@ -10668,6 +10669,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["filter-obj", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/filter-obj-npm-1.1.0-84128fc26d-cf2104a7c4.zip/node_modules/filter-obj/",
+          "packageDependencies": [
+            ["filter-obj", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["finalhandler", [
         ["npm:1.1.2", {
           "packageLocation": "./.yarn/cache/finalhandler-npm-1.1.2-55a75d6b53-617880460c.zip/node_modules/finalhandler/",
@@ -11142,6 +11152,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@testing-library/user-event", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:12.8.3"],
             ["axios", "npm:0.24.0"],
             ["eslint-config-react-app", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:6.0.0"],
+            ["query-string", "npm:7.0.1"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:330e1a1fa6deb1e0ff67e1d29bb6e865f39215f1ecaef71e045bd99ffcf17217518865930682bdcdd46bd01d5299055fcd0aeb9a4b5531ef0ff6d2202cad70a9#npm:17.0.2"],
             ["react-is", "npm:17.0.2"],
@@ -16773,6 +16784,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["strict-uri-encode", "npm:1.1.0"]
           ],
           "linkType": "HARD",
+        }],
+        ["npm:7.0.1", {
+          "packageLocation": "./.yarn/cache/query-string-npm-7.0.1-4631368591-2eb990c0ea.zip/node_modules/query-string/",
+          "packageDependencies": [
+            ["query-string", "npm:7.0.1"],
+            ["decode-uri-component", "npm:0.2.0"],
+            ["filter-obj", "npm:1.1.0"],
+            ["split-on-first", "npm:1.1.0"],
+            ["strict-uri-encode", "npm:2.0.0"]
+          ],
+          "linkType": "HARD",
         }]
       ]],
       ["querystring", [
@@ -18618,6 +18640,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["split-on-first", [
+        ["npm:1.1.0", {
+          "packageLocation": "./.yarn/cache/split-on-first-npm-1.1.0-e2f3ab5e4e-16ff85b54d.zip/node_modules/split-on-first/",
+          "packageDependencies": [
+            ["split-on-first", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["split-string", [
         ["npm:3.1.0", {
           "packageLocation": "./.yarn/cache/split-string-npm-3.1.0-df5d83450e-ae5af5c91b.zip/node_modules/split-string/",
@@ -18789,6 +18820,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/strict-uri-encode-npm-1.1.0-a79c6f7f24-9466d371f7.zip/node_modules/strict-uri-encode/",
           "packageDependencies": [
             ["strict-uri-encode", "npm:1.1.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/strict-uri-encode-npm-2.0.0-1ec3189376-eaac4cf978.zip/node_modules/strict-uri-encode/",
+          "packageDependencies": [
+            ["strict-uri-encode", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
