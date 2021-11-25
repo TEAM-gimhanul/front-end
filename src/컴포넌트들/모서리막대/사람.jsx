@@ -58,7 +58,7 @@ const 글테두리 = 꾸미기.div`
 
 const 제목 = 꾸미기.div`
   font-size: 1.125rem;
-  font-weight: bold;
+  font-weight: 500;
   color: ${({ theme }) => theme.색깔들.gray900};
   display: block;
   white-space: nowrap;
