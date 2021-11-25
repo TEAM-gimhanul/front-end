@@ -8,6 +8,10 @@ const 모서리막대테두리 = styled.div`
   min-width: fit-content;
   height: 100%;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
   & > :nth-child(2) {
     @media only screen and (max-width: 900px) {
       margin-top: 76px;
