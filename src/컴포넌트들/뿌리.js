@@ -24,7 +24,6 @@ const 뿌리 = () => {
           path="/chat/:id"
           element={
             <Suspense fallback={<></>}>
-              {" "}
               <담소화면 소통구멍={소통구멍} />
             </Suspense>
           }

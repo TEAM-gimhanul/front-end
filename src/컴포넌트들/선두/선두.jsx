@@ -9,7 +9,7 @@ const 보자기 = 꾸미기.div`
   height: 72px;
   background-color: ${({ theme }) => theme.색깔들.white};
   box-shadow: 0 17px 20px -18px ${(props) =>
-    props.주제 ? props.theme.색깔들.gray800 : props.theme.색깔들.gray200};
+    props.주제 ? "transparent" : props.theme.색깔들.gray200};
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,16 +21,16 @@ const 묶음 = 꾸미기.div`
   align-items: center;
   width: 100%;
   font-size: 25px;
-  font-weight: bold;
+  font-weight: 500;
   margin-left: 12px;
 `;
 
 const 글자 = 꾸미기.div`
   margin-left: 1vh;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.1765;
   font-size: 1.2rem;
-  color: ${({ theme }) => theme.색깔들.black};
+  color: ${({ theme }) => theme.색깔들.gray900};
 `;
 
 const 잡동사니보자기 = 꾸미기.div`

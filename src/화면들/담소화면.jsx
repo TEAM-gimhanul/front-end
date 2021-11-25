@@ -3,7 +3,7 @@ import 꾸미기 from "styled-components";
 import 담소목록 from "../컴포넌트들/담소/담소목록";
 import 글자받기 from "컴포넌트들/글자받기/글자받기";
 import { useParams } from "react-router";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { 사용자상태분자, 담소상태분자 } from "상태저장소/상태분자";
 import { useRecoilState as 상태총괄갈고리, useRecoilValue } from "recoil";
 
@@ -13,7 +13,7 @@ const 담소화면 = ({ 소통구멍 }) => {
   const [담소들, 선언담소목록] = 상태총괄갈고리(담소상태분자(id));
   useEffect(() => {
     if (localStorage.getItem("access_token")) {
-      소통구멍.current.on("message", (담소) =>
+      소통구멍.current.once("message", (담소) =>
         선언담소목록((oldDate) => [...oldDate, 담소])
       );
     }

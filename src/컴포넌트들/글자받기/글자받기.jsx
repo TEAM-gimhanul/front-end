@@ -1,22 +1,30 @@
 import React, { useState } from "react";
-import 꾸미기 from "styled-components";
+import 꾸미기, { keyframes } from "styled-components";
 import { ReactComponent as 그림 } from "자산들/그림.svg";
 import 사용주제갈고리 from "갈고리들/use주제";
 import { useNavigate } from "react-router";
 
+const 채팅로딩애니메이션 = keyframes`
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
+`;
 const 큰보자기 = 꾸미기.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 12px;
+  padding: 8px 12px;
 `;
 const 회색보자기 = 꾸미기.div`
   width: 100%; 
   height: 50px;
   border-radius: 100px;
-  background-color: ${(props) => (props.주제 ? "#616161" : "rgb(247,247,247)")};
+  background-color: ${(props) =>
+    props.주제 ? props.theme.색깔들.gray800 : "rgb(247,247,247)"};
   display: flex;
   justify-content: left;
   align-items: center;
@@ -33,6 +41,7 @@ const 회색보자기 = 꾸미기.div`
     border: none;
     outline: none;
     background: none;
+    animation: 5s ${채팅로딩애니메이션} infinite;
   }
 `;
 const 보자기안의글자받기 = 꾸미기.div`
