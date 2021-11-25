@@ -145,24 +145,23 @@ margin-top: 16.4vh;
     width: 30px; height: 30px;
     background-color:#87878787;
     margin-top: 1vh;
-    margin-left: 1.05vh;
+    margin-left: 1vh;
   }
 `;
 const 네모2 = 꾸미기.div`
 display: flex;
 flex-direction: column;
-margin-right: 0.2vh;
   div {
     width: 30px; height: 30px;
     background-color:#87878787;
     margin-top: 1vh;
-    margin-left: 1vh;
+    margin-left: 1.2vh;
   }
 `;
 const 네모3 = 꾸미기.div`
 display: flex;
 margin-bottom: 17vh;
-margin-right: -16.5vh;
+margin-right: -17.2vh;
   div {
     width: 30px; height: 30px;
     background-color: #87878787;
@@ -171,7 +170,8 @@ margin-right: -16.5vh;
   }
 `;
 const 네모4 = 꾸미기.div`
-  margin-left: 7.25vh;
+margin-right:0.5vh;
+  margin-left: 7.5vh;
   div {
     width: 30px; height: 30px;
     background-color:#87878787;
