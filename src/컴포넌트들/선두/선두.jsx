@@ -28,7 +28,7 @@ const 글자 = styled.div`
   margin-left: 1vh;
   font-weight: 600;
   line-height: 1.1765;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: ${({theme}) => theme.색깔들.black};
 `;
 
@@ -43,7 +43,7 @@ const 선두 = () => {
     <보자기 주제={현재주제}>
       <묶음>
         <사진
-          size={52}
+          size={42}
           avatarUrl={담소_정보.사용자사진}
           name={담소_정보.사용자이름}
           showBorder={false}
