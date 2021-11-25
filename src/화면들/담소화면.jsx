@@ -25,4 +25,5 @@ export default 담소화면;
 const 담소나누기보자기 = styled.div`
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
 `;
