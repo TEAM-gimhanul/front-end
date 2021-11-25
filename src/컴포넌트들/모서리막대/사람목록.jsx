@@ -1,13 +1,19 @@
-import 꾸미기 from "styled-components";
+import styled from "styled-components";
 import 사람 from "컴포넌트들/모서리막대/사람";
 import 선두 from "컴포넌트들/모서리막대/선두";
 
-const 모서리막대테두리 = 꾸미기.div`
+const 모서리막대테두리 = styled.div`
   display: inline-flex;
   flex-direction: column;
   min-width: fit-content;
   height: 100%;
-  overflow-y: scroll
+  overflow-y: scroll;
+  & > :nth-child(2) {
+    margin-top: 86px;
+    @media only screen and (max-width: 900px) {
+      margin-top: 170px;
+    }
+  }
 `;
 
 const 사람목록 = () => {
