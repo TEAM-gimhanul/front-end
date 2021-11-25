@@ -1,6 +1,23 @@
 import React from "react";
-import 꾸미기 from "styled-components";
+import 꾸미기, { css as 크스스 } from "styled-components";
 import * as 얍 from "./통계수치";
+
+const 색깔넣기 = () => {
+  const 셈 = 8;
+  let 꾸미기 = "";
+
+  for (let i = 1; i < 셈; i += 1) {
+    꾸미기 += `
+            & #d${i} {
+              background-color: #5133E6 !important;
+            }
+        `;
+  }
+
+  return 크스스`
+    ${꾸미기}
+  `;
+};
 
 const 더큰보자기 = 꾸미기.div`
   width; 100%;
@@ -13,7 +30,9 @@ const 더큰보자기 = 꾸미기.div`
     flex-direction: column;
     overflow-x:hidden;
   }
+  ${색깔넣기()}
 `;
+
 const 큰보자기 = 꾸미기.div`
   width: 100%;
   display: flex;
@@ -24,71 +43,72 @@ const 큰보자기 = 꾸미기.div`
     margin: 0;
   }
 `;
+
 const 이응하나 = () => {
   return (
     <>
-      <div className="일" />
-      <div className="이" />
-      <div className="삼" />
-      <div className="사" />
+      <div className="일" id="d1" />
+      <div className="이" id="d2" />
+      <div className="삼" id="d3" />
+      <div className="사" id="d4" />
     </>
   );
 };
 const 이응둘 = () => {
   return (
     <>
-      <div className="일" />
-      <div className="이" />
-      <div className="삼" />
+      <div className="일" id="d5" />
+      <div className="이" id="d6" />
+      <div className="삼" id="d7" />
     </>
   );
 };
 const 이응셋 = () => {
   return (
     <>
-      <div className="일" />
-      <div className="이" />
-      <div className="삼" />
+      <div className="일" id="d8" />
+      <div className="이" id="d9" />
+      <div className="삼" id="d10" />
     </>
   );
 };
 const 이응넷 = () => {
   return (
     <>
-      <div className="일" />
-      <div className="이" />
-      <div className="삼" />
-      <div className="사" />
+      <div className="일" id="d11" />
+      <div className="이" id="d12" />
+      <div className="삼" id="d13" />
+      <div className="사" id="d14" />
     </>
   );
 };
 const 요하나 = () => {
   return (
     <>
-      <div className="일" />
-      <div className="이" />
+      <div className="일" id="d15" />
+      <div className="이" id="d16" />
     </>
   );
 };
 const 요둘 = () => {
   return (
     <>
-      <div className="일" />
-      <div className="이" />
-      <div className="삼" />
-      <div className="사" />
-      <div className="오" />
-      <div className="육" />
-      <div className="칠" />
-      <div className="팔" />
+      <div className="일" id="d17" />
+      <div className="이" id="d18" />
+      <div className="삼" id="d19" />
+      <div className="사" id="d20" />
+      <div className="오" id="d21" />
+      <div className="육" id="d22" />
+      <div className="칠" id="d23" />
+      <div className="팔" id="d24" />
     </>
   );
 };
 const 요셋 = () => {
   return (
     <>
-      <div className="일" />
-      <div className="이" />
+      <div className="일" id="d25" />
+      <div className="이" id="d26" />
     </>
   );
 };
@@ -145,7 +165,7 @@ margin-bottom: 17vh;
 margin-right: -16.5vh;
   div {
     width: 30px; height: 30px;
-    background-color: #5133E6;
+    background-color: #87878787;
     margin-top: 1vh;
     margin-left: 1vh;
   }
@@ -194,7 +214,7 @@ const 통계 = () => {
             <이응하나 />
           </네모1>
           <네모2>
-            <이응둘 />
+            <이응셋 />
           </네모2>
         </보자기>
         <보자기둘>
