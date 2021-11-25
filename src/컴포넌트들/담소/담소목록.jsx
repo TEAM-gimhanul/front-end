@@ -16,7 +16,7 @@ export default 담소목록;
 const 담소목록보자기 = styled.div`
   padding: 4px 12px;
   width: 100%;
-  height: 100%;
+  flex: 1;
   box-sizing: border-box;
   overflow-y: scroll;
 `;
