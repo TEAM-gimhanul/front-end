@@ -18,6 +18,7 @@ const 콜백 = () => {
     getToken(query.get("code")).then((res) => {
       localStorage.setItem("access_token", res.accessToken);
       navigate("/");
+      location.reload();
     });
   }, [type]);
   return <div></div>;
