@@ -13,10 +13,23 @@ const 콜백 = () => {
     });
     return data;
   };
+
+  const getUser = async (token) => {
+    const { data } = await axios.get(`${기본_끝점}/users/my`, {
+      headers: {
+        authorization: `Bearer ${token}`,
+      },
+    });
+
+    return data;
+  };
+
   useEffect(() => {
     const query = new URLSearchParams(search);
-    getToken(query.get("code")).then((res) => {
+    getToken(query.get("code")).then(async (res) => {
       localStorage.setItem("access_token", res.accessToken);
+      const user = await getUser(res.accessToken);
+      localStorage.setItem("userCache", JSON.stringify(user));
       navigate("/");
     });
   }, [type]);

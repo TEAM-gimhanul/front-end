@@ -3,7 +3,7 @@ import 꾸미기 from "styled-components";
 
 const 담소항목 = (인자) => {
   const { profileImage, name, message, 생성일 } = 인자;
-  const 유형 = "너";
+  const 유형 = JSON.parse(localStorage.userCache).name === name ? "나" : "너";
   return (
     <보자기 유형={유형}>
       {유형 === "너" && (
