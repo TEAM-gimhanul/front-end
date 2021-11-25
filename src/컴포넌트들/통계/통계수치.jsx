@@ -24,7 +24,7 @@ margin-left: 15vh;
   color: white;
 @media screen and (max-width: 700px) {
   margin-right: -15vh;
-  width: 30vh;
+  width: 50vw;
   height: 5vh;
 }
 `;
