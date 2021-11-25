@@ -17,7 +17,12 @@ export const 사용자상태분자 = 상태분자({
   default: [],
 });
 
-const getContent = async (id) => {
+export const 나의상태분자 = 상태분자({
+  key: "나의상태분자",
+  default: [],
+});
+
+const getContent = async id => {
   const token = localStorage.getItem("access_token");
   if (token) {
     const { data } = await axios.get(`${기본_끝점}/content?room_id=${id}`, {
@@ -31,7 +36,7 @@ const getContent = async (id) => {
 
 export const 담소상태분자 = 상태분자가족({
   key: "담소상태분자",
-  default: async (id) => {
+  default: async id => {
     const data = await getContent(id);
     return data;
   },
