@@ -5,15 +5,18 @@ const 소통구멍갈고리 = () => {
   const 소통구멍참조 = useRef();
 
   useEffect(() => {
-    소통구멍참조.current = 소통구멍.connect("https://socket.xquare.app", {
-      transports: ["websocket"],
-      cors: {
-        origin: "*",
-      },
-      query: {
-        authorization: `eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMzMwOCwiZXhwIjoxNjM3ODQwMjA4fQ.VS22-Dc_6axwV0QQmRl58_c2y_ORmxe7PDo1xt63w3g`,
-      },
-    });
+    const token = localStorage.getItem("access_token");
+    if (token) {
+      소통구멍참조.current = 소통구멍.connect("https://socket.xquare.app", {
+        transports: ["websocket"],
+        cors: {
+          origin: "*",
+        },
+        query: {
+          authorization: ``,
+        },
+      });
+    }
   }, [소통구멍참조]);
 
   return 소통구멍참조;

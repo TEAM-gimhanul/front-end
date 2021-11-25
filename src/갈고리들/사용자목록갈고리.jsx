@@ -8,9 +8,10 @@ const use사용자목록갈고리 = () => {
 
   const 유저목록받아오기 = async () => {
     try {
+      const token = localStorage.getItem("access_token");
       const { data } = await axios.get(`${기본_끝점}/rooms`, {
         headers: {
-          Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMzMwOCwiZXhwIjoxNjM3ODQwMjA4fQ.VS22-Dc_6axwV0QQmRl58_c2y_ORmxe7PDo1xt63w3g`,
+          Authorization: token ? `Bearer ${token}` : null,
           "Access-Control-Allow-Origin": "*",
         },
       });

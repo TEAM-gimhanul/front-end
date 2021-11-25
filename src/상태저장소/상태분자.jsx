@@ -18,10 +18,10 @@ export const 사용자상태분자 = 상태분자({
 });
 
 const getContent = async (id) => {
+  const token = localStorage.getItem("access_token");
   const { data } = await axios.get(`${기본_끝점}/content?room_id=${id}`, {
     headers: {
-      authorization:
-        "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMTQ1NCwiZXhwIjoxNjM3ODM4MzU0fQ.DMOcVt1_SiYkWbTAosX-GAJa_UpW1ovb4t8qQyjzYLw",
+      authorization: token ? `Bearer ${token}` : null,
     },
   });
   return data;
