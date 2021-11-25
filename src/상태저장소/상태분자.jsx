@@ -1,6 +1,5 @@
 import { atom as 상태분자, atomFamily as 상태분자가족 } from "recoil";
-import axios from "axios";
-import { 기본_끝점 } from "구성들/구성";
+import 요청 from "잡동사니/요청";
 
 export const 띄움창전역상태분자 = 상태분자({
   key: "띄움창전역상태분자",
@@ -25,7 +24,7 @@ export const 나의상태분자 = 상태분자({
 const getContent = async id => {
   const token = localStorage.getItem("access_token");
   if (token) {
-    const { data } = await axios.get(`${기본_끝점}/content?room_id=${id}`, {
+    const { data } = await 요청.get(`/content?room_id=${id}`, {
       headers: {
         authorization: token ? `Bearer ${token}` : null,
       },

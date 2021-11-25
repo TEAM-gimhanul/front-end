@@ -3,8 +3,7 @@ import 대표 from "자산들/로고.png";
 import 어두운대표 from "자산들/다크로고.png";
 import 사용주제갈고리 from "갈고리들/use주제";
 import { useEffect, useState } from "react";
-import axios from "axios";
-import { 기본_끝점 } from "구성들/구성";
+import 요청 from "잡동사니/요청";
 
 const 로그인 = () => {
   const [, 현재주제] = 사용주제갈고리();
@@ -14,7 +13,7 @@ const 로그인 = () => {
     google: "",
   });
   const getLoginURL = async (type) => {
-    const { data } = await axios.get(`${기본_끝점}/users/${type}`);
+    const { data } = await 요청.get(`/users/${type}`);
     return data;
   };
   const getAllLoginURL = async () => {
