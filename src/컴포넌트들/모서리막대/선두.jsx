@@ -17,12 +17,12 @@ const 보자기 = 꾸미기.div`
   box-shadow: 0 17px 20px -18px ${(props) =>
     props.주제 ? props.theme.색깔들.gray800 : props.theme.색깔들.gray200};
   @media only screen and (max-width: 900px) {
-    width: 72px;
+    width: 62px;
     min-height: 144px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 0px 8px;
+    padding: 0px 8px 0px 5px;
     margin: 0px 6px;
     box-shadow: none;
   }
