@@ -1,14 +1,15 @@
 import React from "react";
 import 꾸미기, { css as 크스스 } from "styled-components";
 import * as 얍 from "./통계수치";
+import 나의갈고리 from "갈고리들/나의갈고리";
 
 const 색깔넣기 = () => {
-  const 셈 = 8;
+  const 끝 = localStorage.getItem("fuxxcount");
   let 꾸미기 = "";
 
-  for (let i = 1; i < 셈; i += 1) {
+  for (let i = 0; i < 끝; i += 1) {
     꾸미기 += `
-            & #d${i} {
+            & #d${i + 1} {
               background-color: #5133E6 !important;
             }
         `;
@@ -200,6 +201,9 @@ margin-left: -4vh;
   }
 `;
 const 통계 = () => {
+  const { 욕설셈 } = 나의갈고리();
+  localStorage.setItem("fuxxcount", 욕설셈);
+
   return (
     <더큰보자기>
       <큰보자기>
