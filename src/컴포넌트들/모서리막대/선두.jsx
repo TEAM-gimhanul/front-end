@@ -1,8 +1,11 @@
-import styled from "styled-components";
-import 주제받기 from "잡동사니/주제받기";
+import 꾸미기 from "styled-components";
+import 사용주제갈고리 from "갈고리들/use주제";
 import 띄움창갈고리 from "갈고리들/띄움창갈고리";
+import 주제받기 from "잡동사니/주제받기";
 
-const 보자기 = styled.div`
+const 보자기 = 꾸미기.div`
+  position: fixed;
+  z-index: 99;
   width: 344px;
   min-height: 60px;
   height: 60px;
@@ -15,17 +18,18 @@ const 보자기 = styled.div`
   background-color: ${({ theme }) => theme.색깔들.white};
   box-shadow: 0 17px 20px -18px ${props => (props.주제 ? props.theme.색깔들.gray800 : props.theme.색깔들.gray200)};
   @media only screen and (max-width: 900px) {
-    width: 72px;
+    width: 62px;
     min-height: 144px;
-    padding: 0px 8px;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin: 6px;
+    padding: 0px 8px 0px 5px;
+    margin: 0px 6px;
+    box-shadow: none;
   }
 `;
 
-const 단추보자기 = styled.div`
+const 단추보자기 = 꾸미기.div`
   width: 80%;
   display: flex;
   justify-content: space-between;
@@ -36,7 +40,7 @@ const 단추보자기 = styled.div`
   }
 `;
 
-const 단추 = styled.div`
+const 단추 = 꾸미기.div`
   width: 120px;
   height: 48px;
   display: flex;

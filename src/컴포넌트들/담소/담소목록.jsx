@@ -1,5 +1,5 @@
 import React, { useState as 상태관리갈고리 } from "react";
-import styled from "styled-components";
+import 꾸미기 from "styled-components";
 import 담소항목 from "./담소항목";
 
 const 담소목록 = ({ 담소목록 }) => {
@@ -13,7 +13,7 @@ const 담소목록 = ({ 담소목록 }) => {
 };
 export default 담소목록;
 
-const 담소목록보자기 = styled.div`
+const 담소목록보자기 = 꾸미기.div`
   padding: 4px 12px;
   width: 100%;
   flex: 1;
