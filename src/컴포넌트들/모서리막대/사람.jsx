@@ -3,6 +3,10 @@ import { Avatar as 사진 } from "@channel.io/bezier-react";
 import 사용주제갈고리 from "갈고리들/use주제";
 import { useNavigate as 사용항해 } from "react-router";
 import 접속중 from "잡동사니/접속중";
+import {
+  useLayoutEffect as 반짝틀이잡히기전,
+  useState as 상태선언,
+} from "react";
 
 const 전체테두리 = 꾸미기.div`
   position: relative;
@@ -37,7 +41,7 @@ const 내용테두리 = 꾸미기.div`
   text-align: center;
   align-items: start;
   justify-content: center;
-  margin-left: 8px;
+  margin-left: 16px;
   width: 72%;
   @media only screen and (max-width: 900px) {
     display: none;
@@ -53,8 +57,7 @@ const 글테두리 = 꾸미기.div`
 `;
 
 const 제목 = 꾸미기.div`
-  font-size: 0.9375rem;
-  line-height: 1.3333;
+  font-size: 1.125rem;
   font-weight: bold;
   color: ${({ theme }) => theme.색깔들.gray900};
   display: block;
@@ -113,7 +116,10 @@ const 사람 = ({ 인자 }) => {
   const 항해 = 사용항해();
   const [, 현재주제] = 사용주제갈고리();
   const { roomId, name, profileImage } = 인자;
-
+  const [접속, 접속선언] = 상태선언();
+  반짝틀이잡히기전(() => {
+    접속선언(접속중());
+  }, []);
   return (
     <전체테두리 onClick={() => 항해(`/chat/${roomId}`)} 주제={현재주제}>
       <사진
@@ -125,12 +131,9 @@ const 사람 = ({ 인자 }) => {
       />
       <내용테두리>
         <제목>{name}</제목>
-        <글테두리>
-          <내용>"없다고하자"</내용>
-          <시간>3시간</시간>
-        </글테두리>
+        <글테두리></글테두리>
       </내용테두리>
-      <상태 상태={접속중()}>
+      <상태 상태={접속}>
         <div />
       </상태>
     </전체테두리>
