@@ -10,7 +10,7 @@ import {
 
 const 전체테두리 = 꾸미기.div`
   position: relative;
-  display: flex;
+  display: ${(props) => (props.보여주기 ? "flex" : "none")};
   width: 344px;
   max-width: 344px;
   padding: 0px 8px;
@@ -112,7 +112,7 @@ const 상태 = 꾸미기.div`
   }
 `;
 
-const 사람 = ({ 인자 }) => {
+const 사람 = ({ 인자, 보여주기 }) => {
   const 항해 = 사용항해();
   const [접속, 접속선언] = 상태선언();
   const [, 현재주제] = 사용주제갈고리();
@@ -123,7 +123,11 @@ const 사람 = ({ 인자 }) => {
   }, []);
 
   return (
-    <전체테두리 onClick={() => 항해(`/chat/${roomId}`)} 주제={현재주제}>
+    <전체테두리
+      onClick={() => 항해(`/chat/${roomId}`)}
+      주제={현재주제}
+      보여주기={보여주기}
+    >
       <사진
         size={56}
         avatarUrl={profileImage}

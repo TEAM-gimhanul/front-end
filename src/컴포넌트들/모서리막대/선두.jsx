@@ -12,7 +12,7 @@ const 보자기 = 꾸미기.div`
   width: 344px;
   min-height: 60px;
   height: 60px;
-  display: flex;
+  display: ${(props) => (props.보여주기 ? "flex" : "none")};
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -99,7 +99,7 @@ const 단추 = 꾸미기.div`
   }
 `;
 
-const 선두 = ({ 소통구멍 }) => {
+const 선두 = ({ 소통구멍, 보여주기 }) => {
   const 항해 = 사용항해();
   const token = localStorage.getItem("access_token");
   const [, 현재주제] = 사용주제갈고리();
@@ -123,7 +123,7 @@ const 선두 = ({ 소통구멍 }) => {
   };
 
   return (
-    <보자기 주제={현재주제}>
+    <보자기 주제={현재주제} 보여주기={보여주기}>
       <단추보자기>
         <사진보자기>
           <Avatar
