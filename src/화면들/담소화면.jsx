@@ -1,5 +1,5 @@
 import 선두 from "컴포넌트들/선두/선두";
-import styled from "styled-components";
+import 꾸미기 from "styled-components";
 import 담소목록 from "../컴포넌트들/담소/담소목록";
 
 const 담소화면 = () => {
@@ -22,7 +22,8 @@ const 담소화면 = () => {
 
 export default 담소화면;
 
-const 담소나누기보자기 = styled.div`
+const 담소나누기보자기 = 꾸미기.div`
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
 `;
