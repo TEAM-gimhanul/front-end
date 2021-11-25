@@ -1,5 +1,8 @@
 import 꾸미기 from "styled-components";
+import { useNavigate as 사용항해 } from "react-router";
+
 const 꼬리말 = ({ 소통구멍 }) => {
+  const 항해 = 사용항해();
   const 무작위만남클릭 = async () => {
     await 소통구멍.current.emit("join");
     await 소통구멍.current.once("room", (data) => {
