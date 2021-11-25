@@ -25,6 +25,7 @@ const 담소화면 = ({ 소통구멍 }) => {
       roomId: id,
       message: 담소,
     };
+
     소통구멍.current.emit("message", 정보);
   };
   return (

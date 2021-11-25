@@ -7,7 +7,6 @@ const 소통구멍갈고리 = () => {
   useEffect(() => {
     const token = localStorage.getItem("access_token");
     if (token) {
-      console.log(token);
       소통구멍참조.current = 소통구멍.connect("https://socket.xquare.app", {
         transports: ["websocket"],
         cors: {
