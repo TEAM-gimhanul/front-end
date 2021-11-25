@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import 꾸미기 from "styled-components";
 import { ReactComponent as 그림 } from "자산들/그림.svg";
 
@@ -40,22 +40,31 @@ input {
 }
 `;
 const 버튼되는지궁금해서 = () => {
-  console.log('ㅇㅇ클릭 됨');
+  console.log("ㅇㅇ클릭 됨");
 };
 
-const 글자받기 = () => {
-  return(
+const 글자받기 = ({ 담소보내기 }) => {
+  const [state, setState] = useState("");
+  return (
     <큰보자기>
       <회색보자기>
         <보자기안의글자받기>
-        <form>
-          <input
-            placeholder="Aa"
-            type="text"
-          />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              담소보내기(state);
+            }}
+          >
+            <input
+              placeholder="보낼 담소내용을 입력해주세요!"
+              onChange={(e) => setState(e.target.value)}
+              type="text"
+            />
           </form>
         </보자기안의글자받기>
-        <button onClick={버튼되는지궁금해서}><그림 className="그림" /></button>
+        <button onClick={버튼되는지궁금해서}>
+          <그림 className="그림" />
+        </button>
       </회색보자기>
     </큰보자기>
   );
