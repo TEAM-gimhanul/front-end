@@ -31,6 +31,7 @@ const 콜백 = () => {
       const user = await getUser(res.accessToken);
       localStorage.setItem("userCache", JSON.stringify(user));
       navigate("/");
+      location.reload();
     });
   }, [type]);
   return <div></div>;
