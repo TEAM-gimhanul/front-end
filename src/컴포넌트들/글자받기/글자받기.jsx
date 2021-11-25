@@ -53,11 +53,13 @@ const 글자받기 = ({ 담소보내기 }) => {
             onSubmit={(e) => {
               e.preventDefault();
               담소보내기(state);
+              setState("");
             }}
           >
             <input
               placeholder="보낼 담소내용을 입력해주세요!"
               onChange={(e) => setState(e.target.value)}
+              value={state}
               type="text"
             />
           </form>
