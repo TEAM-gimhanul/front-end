@@ -1,5 +1,5 @@
 import { colors } from "@semicolondsm/design-token";
-import { 주제상태 } from "저장소/주제저장소";
+import { 주제상태 } from "상태저장소/주제저장소";
 import 주제받기 from "잡동사니/주제받기";
 import { useRecoilState as 상태총괄갈고리 } from "recoil";
 

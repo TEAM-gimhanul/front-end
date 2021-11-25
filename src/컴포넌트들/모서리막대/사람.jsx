@@ -18,7 +18,7 @@ const 전체테두리 = 꾸미기.div`
   cursor: pointer;
   border-radius: 15px;
   margin: 6px;
-  background-color: ${({ theme }) => theme.색깔들.white};
+  background-color: transparent;
   &:hover {
     // 선택시 purple50 으로
     background-color: ${(props) =>

@@ -1,5 +1,5 @@
 import { useEffect, useState as 상태관리갈고리 } from "react";
-import styled from "styled-components";
+import 꾸미기 from "styled-components";
 
 const 위치 = Object.freeze({
   거짓: 1,
@@ -36,7 +36,7 @@ const 똑딱이 = ({ 값 = false, 똑딱 }) => {
 
 export default 똑딱이;
 
-const 단추보자기 = styled.div`
+const 단추보자기 = 꾸미기.div`
   width: 40px;
   height: 20px;
   border-radius: 11px;
@@ -47,7 +47,7 @@ const 단추보자기 = styled.div`
   transition: background 0.1s linear;
 `;
 
-const 단추동그라미 = styled.div`
+const 단추동그라미 = 꾸미기.div`
   position: absolute;
   width: 18px;
   height: 18px;

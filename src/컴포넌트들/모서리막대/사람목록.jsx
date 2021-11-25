@@ -1,20 +1,22 @@
-import styled from "styled-components";
+import 꾸미기 from "styled-components";
 import 사람 from "컴포넌트들/모서리막대/사람";
 import 선두 from "컴포넌트들/모서리막대/선두";
 
-const 모서리막대테두리 = styled.div`
+const 모서리막대테두리 = 꾸미기.div`
   display: inline-flex;
   flex-direction: column;
   min-width: fit-content;
   height: 100%;
   overflow-y: scroll;
   -ms-overflow-style: none;
+  border-right: 1px solid ${({ theme }) => theme.색깔들.gray300};
   ::-webkit-scrollbar {
     display: none;
   }
-  & > :nth-child(2) {
+  & > :first-child {
+    margin-top: 80px;
     @media only screen and (max-width: 900px) {
-      margin-top: 76px;
+      margin-top: 156px;
     }
   }
 `;
