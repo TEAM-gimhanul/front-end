@@ -13,7 +13,7 @@ function 상태관리함수(상태, 발생) {
       };
     case "성공":
       return {
-        로딩: false,
+        불러오는중: false,
         정보: 발생.정보,
         오류: null,
       };
