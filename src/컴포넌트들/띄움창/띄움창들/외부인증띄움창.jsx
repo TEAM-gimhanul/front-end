@@ -3,6 +3,7 @@ import { 띄움창보자기 } from "../띄움창제공자";
 import 꾸미기 from "styled-components";
 import 띄움창갈고리 from "갈고리들/띄움창갈고리";
 import 외부인증갈고리 from "갈고리들/외부인증갈고리";
+import 인자구하기 from "query-string";
 import 연동 from "axios";
 
 const 외부인증띄움창헤더 = 꾸미기.h3`
@@ -52,6 +53,7 @@ const 닫힘단추 = 꾸미기.button`
 
 const 외부인증띄움창 = () => {
   const [주소, 주소갱신] = 상태관리(null);
+  const [인자값, 인자값갱신] = 상태관리(null);
   const { 띄움창가리기 } = 띄움창갈고리();
   const { 주소식별자가지고손보기, 주소식별자 } = 외부인증갈고리();
 
@@ -68,6 +70,17 @@ const 외부인증띄움창 = () => {
     주소식별자가지고손보기(인자);
     재귀주솟값가져오기();
   };
+
+  깜빡갈고리(() => {
+    if (localStorage.getItem("auth")) return;
+
+    const 인자값 = 인자구하기.parse(window.location.search);
+    console.log(인자값);
+    if (인자값.code !== undefined) {
+      인자값갱신(인자값.code);
+      localStorage.setItem("auth", 인자값.code);
+    }
+  }, []);
 
   if (주소) {
     window.location.href = 주소;
