@@ -2,14 +2,14 @@ import { Avatar as 사진 } from "@channel.io/bezier-react";
 import 꾸미기 from "styled-components";
 
 const 담소항목 = (인자) => {
-  const { 사용자사진, name, message, 생성일 } = 인자;
+  const { profileImage, name, message, 생성일 } = 인자;
   const 유형 = "너";
   return (
     <보자기 유형={유형}>
       {유형 === "너" && (
         <사진보자기>
           <사진
-            avatarUrl={사용자사진}
+            avatarUrl={profileImage}
             name={name}
             onClick={function noRefCheck() {}}
             onMouseEnter={function noRefCheck() {}}

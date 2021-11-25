@@ -10,10 +10,10 @@ import { useRecoilState as 상태총괄갈고리, useRecoilValue } from "recoil"
 const 담소화면 = ({ 소통구멍 }) => {
   const { id } = useParams();
   const [사용자들, 사용자들정의] = 상태총괄갈고리(사용자상태분자);
-  const 담소들 = useRecoilValue(담소상태분자(id));
-  // useEffect(() => {
-  //   getContent();
-  // }, [id]);
+  const [담소들, 선언담소목록] = 상태총괄갈고리(담소상태분자(id));
+  useEffect(() => {
+    소통구멍.current.on("message", (담소) => 선언담소목록([...담소들, 담소]));
+  }, [id]);
 
   const getCurrentRoom = () => {
     return 사용자들.filter((item) => item.roomId === Number(id))[0];
@@ -24,7 +24,6 @@ const 담소화면 = ({ 소통구멍 }) => {
       message: 담소,
     };
     소통구멍.current.emit("message", 정보);
-    //선언담소목록([..._담소목록, 정보]);
   };
   return (
     <담소나누기보자기>
