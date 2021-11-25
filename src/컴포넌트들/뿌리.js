@@ -13,6 +13,7 @@ const 뿌리 = () => {
       <라우트들>
         <라우트 p ath="/" element={<TEST />} />
         <라우트 path="/t1" element={<모서리막대 />} />
+        <라우트 path="header" element={<선두 />} />
         <라우트 path="/chat/:id" element={<담소화면 />} />
       </라우트들>
     </보자기>
