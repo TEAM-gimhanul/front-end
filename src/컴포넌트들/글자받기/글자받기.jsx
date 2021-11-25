@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import 꾸미기 from "styled-components";
 import { ReactComponent as 그림 } from "자산들/그림.svg";
+import 사용주제갈고리 from "갈고리들/use주제";
 
 const 큰보자기 = 꾸미기.div`
   width: 100%;
@@ -11,7 +12,7 @@ const 큰보자기 = 꾸미기.div`
 const 회색보자기 = 꾸미기.div`
   width: 80%; height: 50px;
   border-radius: 100px;
-  background-color: rgb(247,247,247);
+  background-color: ${(props) => (props.주제 ? "#9E9E9E" : "rgb(247,247,247)")};
   display: flex;
   justify-content: left;
   align-items: center;
@@ -45,9 +46,10 @@ const 버튼되는지궁금해서 = () => {
 
 const 글자받기 = ({ 담소보내기 }) => {
   const [state, setState] = useState("");
+  const [, 현재주제] = 사용주제갈고리();
   return (
     <큰보자기>
-      <회색보자기>
+      <회색보자기 주제={현재주제}>
         <보자기안의글자받기>
           <form
             onSubmit={(e) => {
@@ -61,6 +63,7 @@ const 글자받기 = ({ 담소보내기 }) => {
               onChange={(e) => setState(e.target.value)}
               value={state}
               type="text"
+              style={{ color: 현재주제 ? "white" : "black" }}
             />
           </form>
         </보자기안의글자받기>
