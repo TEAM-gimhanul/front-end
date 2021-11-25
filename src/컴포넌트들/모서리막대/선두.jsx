@@ -1,7 +1,6 @@
 import 꾸미기 from "styled-components";
 import 사용주제갈고리 from "갈고리들/use주제";
-import 띄움창갈고리 from "갈고리들/띄움창갈고리";'
-import 주제받기 from "잡동사니/주제받기";
+import 띄움창갈고리 from "갈고리들/띄움창갈고리"
 import { useNavigate as 사용항해 } from "react-router";
 import use사용자목록갈고리 from "갈고리들/사용자목록갈고리";
 
