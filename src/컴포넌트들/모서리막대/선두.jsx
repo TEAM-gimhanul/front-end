@@ -67,9 +67,9 @@ const 선두 = ({ 소통구멍 }) => {
   const 항해 = 사용항해();
   const [, 현재주제] = 사용주제갈고리();
 
-  const 무작위만남클릭 = () => {
-    소통구멍.current.emit("join");
-    소통구멍.current.on("room", (data) => {
+  const 무작위만남클릭 = async () => {
+    await 소통구멍.current.emit("join");
+    await 소통구멍.current.on("room", (data) => {
       항해(`/chat/${data.roomId}`);
     });
   };
