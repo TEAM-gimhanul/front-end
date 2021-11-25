@@ -99,11 +99,11 @@ const 상태 = 꾸미기.div`
     height: 12px;
     border-radius: 50%;
     background-color: ${(props) =>
-      props.상태 === "접속중"
+      props.상태 
         ? props.theme.색깔들.green500
         : props.theme.색깔들.gray400};
   }
-  // 온라인 : #3acf5a, 오프라인: gray400,
+  // 1 : #3acf5a, 0: gray400,
   @media only screen and (max-width: 900px) {
     display: none;
   }
@@ -129,7 +129,7 @@ const 사람 = ({ 인자 }) => {
           <시간>{담소목록[0].생성일}</시간>
         </글테두리>
       </내용테두리>
-      <상태 상태={접속중 ? "접속중" : "접속중이지않음"}>
+      <상태 상태={접속중 ? 1 : 0}>
         <div />
       </상태>
     </전체테두리>
