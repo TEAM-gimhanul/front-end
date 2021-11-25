@@ -13,7 +13,7 @@ const 소통구멍갈고리 = () => {
           origin: "*",
         },
         query: {
-          authorization: ``,
+          authorization: token,
         },
       });
     }
