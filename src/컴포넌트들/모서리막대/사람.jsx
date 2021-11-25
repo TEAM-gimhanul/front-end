@@ -54,6 +54,7 @@ const 글테두리 = 꾸미기.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: ${(props) => (props.주제 ? props.theme.색깔들.gray400 : "black")};
 `;
 
 const 제목 = 꾸미기.div`
@@ -137,7 +138,7 @@ const 사람 = ({ 인자, 보여주기 }) => {
       />
       <내용테두리>
         <제목>{name}</제목>
-        <글테두리>{lastMessage}</글테두리>
+        <글테두리 주제={현재주제}>{lastMessage}</글테두리>
       </내용테두리>
       <상태 상태={online}>
         <div />
