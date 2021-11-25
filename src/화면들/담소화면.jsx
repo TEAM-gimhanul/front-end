@@ -1,9 +1,11 @@
-import 모서리막대 from "../컴포넌트들/모서리막대/사람목록";
-import 담소목록 from "../컴포넌트들/담소/담소목록";
+import 선두 from "컴포넌트들/선두/선두";
 import styled from "styled-components";
+import 담소목록 from "../컴포넌트들/담소/담소목록";
+
 const 담소화면 = () => {
   return (
     <담소나누기보자기>
+      <선두 />
       <담소목록
         담소목록={[
           {
