@@ -23,12 +23,14 @@ const 꼬리말 = ({ 소통구멍, 보여주기 }) => {
   };
 
   const 무작위만남클릭 = async () => {
-    await 소통구멍.current.emit("join");
-    await 소통구멍.current.once("room", (data) => {
-      항해(`/chat/${data.roomId}`);
-      유저정보_보여주기({ 얼굴: data.profileImage, 이름: data.name });
-    });
-    await 유저목록받아오기();
+    if (!모달보여주기) {
+      await 소통구멍.current.emit("join");
+      await 소통구멍.current.once("room", (data) => {
+        항해(`/chat/${data.roomId}`);
+        유저정보_보여주기({ 얼굴: data.profileImage, 이름: data.name });
+      });
+      await 유저목록받아오기();
+    }
   };
 
   return (
