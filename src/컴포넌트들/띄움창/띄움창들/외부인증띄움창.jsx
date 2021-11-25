@@ -1,7 +1,9 @@
+import { useState as 상태관리, useEffect as 깜빡갈고리 } from "react";
 import { 띄움창보자기 } from "../띄움창제공자";
 import 꾸미기 from "styled-components";
 import 띄움창갈고리 from "갈고리들/띄움창갈고리";
 import 외부인증갈고리 from "갈고리들/외부인증갈고리";
+import 연동 from "axios";
 
 const 외부인증띄움창헤더 = 꾸미기.h3`
   font-size: 1.5rem;
@@ -49,21 +51,52 @@ const 닫힘단추 = 꾸미기.button`
 `;
 
 const 외부인증띄움창 = () => {
+  const [주소, 주소갱신] = 상태관리(null);
   const { 띄움창가리기 } = 띄움창갈고리();
   const { 주소식별자가지고손보기, 주소식별자 } = 외부인증갈고리();
+
+  const 재귀주솟값가져오기 = async () => {
+    try {
+      const response = await 연동.get(주소식별자);
+      주소갱신(response.data);
+    } catch (오류) {
+      console.log(오류);
+    }
+  };
+
+  const 재귀주솟값손보기 = 인자 => {
+    주소식별자가지고손보기(인자);
+    재귀주솟값가져오기();
+  };
+
+  if (주소) {
+    window.location.href = 주소;
+  }
 
   return (
     <띄움창보자기>
       <외부인증띄움창꾸미기>
         <닫힘단추 onClick={() => 띄움창가리기()} />
         <외부인증띄움창헤더>외부인증</외부인증띄움창헤더>
-        <외부인증요소 onClick={() => 주소식별자가지고손보기("kakao")}>
+        <외부인증요소
+          onClick={() => {
+            재귀주솟값손보기("kakao");
+          }}
+        >
           카카오
         </외부인증요소>
-        <외부인증요소 onClick={() => 주소식별자가지고손보기("naver")}>
+        <외부인증요소
+          onClick={() => {
+            재귀주솟값손보기("naver");
+          }}
+        >
           네이버
         </외부인증요소>
-        <외부인증요소 onClick={() => 주소식별자가지고손보기("google")}>
+        <외부인증요소
+          onClick={() => {
+            재귀주솟값손보기("google");
+          }}
+        >
           구글
         </외부인증요소>
       </외부인증띄움창꾸미기>
