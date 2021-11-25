@@ -17,8 +17,8 @@ export const 사용자상태분자 = 상태분자({
   default: [],
 });
 
-export const 나의분자 = 상태분자({
-  key: "나의분자",
+export const 나의상태분자 = 상태분자({
+  key: "나의상태분자",
   default: [],
 });
 
