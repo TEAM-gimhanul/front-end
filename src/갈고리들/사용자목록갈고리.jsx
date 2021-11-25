@@ -10,7 +10,7 @@ const use사용자목록갈고리 = () => {
     try {
       const { data } = await axios.get(`${기본_끝점}/rooms`, {
         headers: {
-          Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMTQ1NCwiZXhwIjoxNjM3ODM4MzU0fQ.DMOcVt1_SiYkWbTAosX-GAJa_UpW1ovb4t8qQyjzYLw`,
+          Authorization: `Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjbHp6aTExMDlAbmF2ZXIuY29tIiwidHlwZSI6ImFjY2VzcyIsImlhdCI6MTYzNzgzMzMwOCwiZXhwIjoxNjM3ODQwMjA4fQ.VS22-Dc_6axwV0QQmRl58_c2y_ORmxe7PDo1xt63w3g`,
           "Access-Control-Allow-Origin": "*",
         },
       });

@@ -2,6 +2,7 @@ import 꾸미기 from "styled-components";
 import { Avatar as 사진 } from "@channel.io/bezier-react";
 import 사용주제갈고리 from "갈고리들/use주제";
 import { useNavigate as 사용항해 } from "react-router";
+import 접속중 from "잡동사니/접속중";
 
 const 전체테두리 = 꾸미기.div`
   position: relative;
@@ -129,7 +130,7 @@ const 사람 = ({ 인자 }) => {
           <시간>3시간</시간>
         </글테두리>
       </내용테두리>
-      <상태 상태={1}>
+      <상태 상태={접속중()}>
         <div />
       </상태>
     </전체테두리>
