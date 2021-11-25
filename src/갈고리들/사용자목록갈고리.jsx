@@ -9,14 +9,16 @@ const use사용자목록갈고리 = () => {
   const 유저목록받아오기 = async () => {
     try {
       const token = localStorage.getItem("access_token");
-      const { data } = await axios.get(`${기본_끝점}/rooms`, {
-        headers: {
-          Authorization: token ? `Bearer ${token}` : null,
-          "Access-Control-Allow-Origin": "*",
-        },
-      });
-      console.log(data);
-      사용자들정의(data);
+      if (token) {
+        const { data } = await axios.get(`${기본_끝점}/rooms`, {
+          headers: {
+            Authorization: token ? `Bearer ${token}` : null,
+            "Access-Control-Allow-Origin": "*",
+          },
+        });
+        console.log(data);
+        사용자들정의(data);
+      }
     } catch (e) {
       console.log(e);
     }

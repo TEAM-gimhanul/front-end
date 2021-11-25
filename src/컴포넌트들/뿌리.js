@@ -10,7 +10,9 @@ const 뿌리 = () => {
   const 소통구멍 = 소통구멍갈고리();
 
   useEffect(() => {
-    소통구멍.current.emit("subscribe-all");
+    if (localStorage.getItem("access_token")) {
+      소통구멍.current.emit("subscribe-all");
+    }
   }, [소통구멍]);
 
   return (

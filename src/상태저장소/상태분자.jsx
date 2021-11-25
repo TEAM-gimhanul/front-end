@@ -19,12 +19,14 @@ export const 사용자상태분자 = 상태분자({
 
 const getContent = async (id) => {
   const token = localStorage.getItem("access_token");
-  const { data } = await axios.get(`${기본_끝점}/content?room_id=${id}`, {
-    headers: {
-      authorization: token ? `Bearer ${token}` : null,
-    },
-  });
-  return data;
+  if (token) {
+    const { data } = await axios.get(`${기본_끝점}/content?room_id=${id}`, {
+      headers: {
+        authorization: token ? `Bearer ${token}` : null,
+      },
+    });
+    return data;
+  }
 };
 
 export const 담소상태분자 = 상태분자가족({
