@@ -8,7 +8,7 @@ const 위치 = Object.freeze({
 
 const 배경 = Object.freeze({
   거짓: "gray300",
-  참: "purple400",
+  참: "indigo500",
 });
 
 const 똑딱이 = ({ 값 = false, 똑딱 }) => {
