@@ -1,5 +1,6 @@
 import { createGlobalStyle as 전역꾸미기생성 } from "styled-components";
 import { reset as 초기화 } from "styled-reset";
+import '스타일들/폰트.css';
 
 /**
  * @author every
@@ -7,7 +8,8 @@ import { reset as 초기화 } from "styled-reset";
 const 전역꾸미기 = 전역꾸미기생성`
     ${초기화};
     body {
-        background-color: ${({ theme }) => theme.색깔들.white}
+        font-family: 'Noto Sans KR', sans-serif !important;
+        background-color: ${({ theme }) => theme.색깔들.white};
     } 
 `;
 
