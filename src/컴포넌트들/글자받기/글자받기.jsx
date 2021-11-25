@@ -1,14 +1,14 @@
 import React from "react";
-import styled from "styled-components";
+import 꾸미기 from "styled-components";
 import { ReactComponent as 그림 } from "자산들/그림.svg";
 
-const 큰보자기 = styled.div`
+const 큰보자기 = 꾸미기.div`
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 `;
-const 회색보자기 = styled.div`
+const 회색보자기 = 꾸미기.div`
   width: 80%; height: 50px;
   border-radius: 100px;
   background-color: rgb(247,247,247);
@@ -23,8 +23,13 @@ const 회색보자기 = styled.div`
   .그림 {
     width: 100px;height: 30px;
   }
+  button {
+    border: none;
+    outline: none;
+    background: none;
+  }
 `;
-const 보자기안의글자받기 = styled.div`
+const 보자기안의글자받기 = 꾸미기.div`
 width: 150vh;
 input {
   width: 80%; height: 45px;
@@ -34,18 +39,23 @@ input {
   outline: none;
 }
 `;
+const 버튼되는지궁금해서 = () => {
+  console.log('ㅇㅇ클릭 됨');
+};
 
 const 글자받기 = () => {
   return(
     <큰보자기>
       <회색보자기>
         <보자기안의글자받기>
+        <form>
           <input
             placeholder="Aa"
             type="text"
           />
+          </form>
         </보자기안의글자받기>
-        <그림 className="그림" />
+        <button onClick={버튼되는지궁금해서}><그림 className="그림" /></button>
       </회색보자기>
     </큰보자기>
   );
