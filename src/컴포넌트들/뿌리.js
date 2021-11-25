@@ -5,6 +5,7 @@ import 담소화면 from "../화면들/담소화면";
 import 꾸미기 from "styled-components";
 import 소통구멍갈고리 from "갈고리들/소통구멍갈고리";
 import 통계 from "./통계/통계";
+import 콜백 from "화면들/콜백";
 
 const 뿌리 = () => {
   const 소통구멍 = 소통구멍갈고리();
@@ -27,6 +28,7 @@ const 뿌리 = () => {
           }
         />
         <라우트 path="stat" element={<통계 />} />
+        <라우트 path="/callback/:type" element={<콜백 />} />
       </라우트들>
     </보자기>
   );
