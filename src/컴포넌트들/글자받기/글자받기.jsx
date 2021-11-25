@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import 꾸미기 from "styled-components";
 import { ReactComponent as 그림 } from "자산들/그림.svg";
+import { useNavigate } from "react-router";
 
 const 큰보자기 = 꾸미기.div`
   width: 100%;
@@ -45,6 +46,7 @@ const 버튼되는지궁금해서 = () => {
 
 const 글자받기 = ({ 담소보내기 }) => {
   const [state, setState] = useState("");
+  const navigate = useNavigate();
   return (
     <큰보자기>
       <회색보자기>
@@ -52,6 +54,10 @@ const 글자받기 = ({ 담소보내기 }) => {
           <form
             onSubmit={(e) => {
               e.preventDefault();
+              if (state === "/통계창") {
+                navigate("/stat");
+                return;
+              }
               담소보내기(state);
               setState("");
             }}
