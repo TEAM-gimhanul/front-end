@@ -9,9 +9,12 @@ const 큰보자기 = 꾸미기.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+  padding: 0 12px;
 `;
 const 회색보자기 = 꾸미기.div`
-  width: 80%; height: 50px;
+  width: 100%; 
+  height: 50px;
   border-radius: 100px;
   background-color: ${(props) => (props.주제 ? "#616161" : "rgb(247,247,247)")};
   display: flex;
@@ -23,7 +26,8 @@ const 회색보자기 = 꾸미기.div`
     }
   }
   .그림 {
-    width: 100px;height: 30px;
+    width: 50px;
+    height: 30px;
   }
   button {
     border: none;
@@ -32,9 +36,9 @@ const 회색보자기 = 꾸미기.div`
   }
 `;
 const 보자기안의글자받기 = 꾸미기.div`
-width: 150vh;
+width: 100%;
 input {
-  width: 80%; height: 45px;
+  width: 100%; height: 45px;
   border-style: none;
   background: transparent;
   margin-left: 2vh;
