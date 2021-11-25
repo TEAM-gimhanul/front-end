@@ -2214,6 +2214,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@semicolondsm/design-token@npm:^1.0.6":
+  version: 1.0.6
+  resolution: "@semicolondsm/design-token@npm:1.0.6"
+  checksum: fdecdaae73fe9c4b90332824b36ee52a8004aea07474b142ebea359031e9b942f13c8da3ac2d2e14c6b035e47c6b186873e92d31c9a90d497986f7856b791e9b
+  languageName: node
+  linkType: hard
+
 "@sinonjs/commons@npm:^1.7.0":
   version: 1.8.2
   resolution: "@sinonjs/commons@npm:1.8.2"
@@ -7333,6 +7340,7 @@ __metadata:
   resolution: "gimhanul-front@workspace:."
   dependencies:
     "@channel.io/bezier-react": ^0.9.3
+    "@semicolondsm/design-token": ^1.0.6
     "@testing-library/jest-dom": ^5.11.4
     "@testing-library/react": ^11.1.0
     "@testing-library/user-event": ^12.1.10
