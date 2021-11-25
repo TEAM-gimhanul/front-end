@@ -23,6 +23,7 @@ const 보자기 = styled.div`
     text-align: center;
     padding: 0px 8px;
     margin: 0px 6px;
+    box-shadow: none;
   }
 `;
 
