@@ -1,5 +1,6 @@
 import 꾸미기 from "styled-components";
 import 사람 from "컴포넌트들/모서리막대/사람";
+import 선두 from "컴포넌트들/모서리막대/선두";
 
 const 모서리막대테두리 = 꾸미기.div`
   display: inline-flex;
@@ -401,6 +402,7 @@ const 사람목록 = () => {
 
   return (
     <모서리막대테두리>
+      <선두 />
       {담소상태.map((담소) => {
         return <사람 key={담소.담소목록[0].생성일} 인자={담소} />;
       })}
