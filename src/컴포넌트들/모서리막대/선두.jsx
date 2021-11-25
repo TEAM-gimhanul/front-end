@@ -81,11 +81,11 @@ const 선두 = ({ 소통구멍 }) => {
     });
     await 유저목록받아오기();
   };
-
+const token = localStorage.getItem("access_token");
   return (
     <보자기 주제={현재주제}>
       <단추보자기>
-        <단추 onClick={() => 외부인증띄움창조작()}>로그인</단추>
+        <단추 onClick={() => 외부인증띄움창조작()}>{token ? "로그아웃" : "로그인"}</단추>
         <단추 onClick={무작위만남클릭}>랜덤매칭</단추>
       </단추보자기>
     </보자기>
