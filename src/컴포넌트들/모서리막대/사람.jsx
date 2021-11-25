@@ -99,38 +99,37 @@ const 상태 = 꾸미기.div`
     height: 12px;
     border-radius: 50%;
     background-color: ${(props) =>
-      props.상태 === "온라인"
+      props.상태 
         ? props.theme.색깔들.green500
         : props.theme.색깔들.gray400};
   }
-  // 온라인 : #3acf5a, 오프라인: gray400,
+  // 1 : #3acf5a, 0: gray400,
   @media only screen and (max-width: 900px) {
     display: none;
   }
 `;
 
-const 사람 = ({ 데이터 }) => {
+const 사람 = ({ 인자 }) => {
   const 현재주제 = 주제받기();
-  const { 담소제목, 담소내용, 담소시간, 사용자사진, 사용자상태, 사용자이름 } =
-    데이터;
+  const { 담소명, 접속중, 담소목록 } = 인자;
 
   return (
     <전체테두리 주제={현재주제}>
       <사진
         size={56}
-        avatarUrl={사용자사진}
-        name={사용자이름}
+        avatarUrl={담소목록[0].사용자사진}
+        name={담소목록[0].사용자이름}
         showBorder={false}
         disabled={false}
       />
       <내용테두리>
-        <제목>{담소제목}</제목>
+        <제목>{담소명}</제목>
         <글테두리>
-          <내용>{담소내용}</내용>
-          <시간>{담소시간}</시간>
+          <내용>{담소목록[0].담소내용}</내용>
+          <시간>{담소목록[0].생성일}</시간>
         </글테두리>
       </내용테두리>
-      <상태 상태={사용자상태}>
+      <상태 상태={접속중 ? 1 : 0}>
         <div />
       </상태>
     </전체테두리>
