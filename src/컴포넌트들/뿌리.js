@@ -6,6 +6,8 @@ import 선두 from "./선두/선두";
 import 담소화면 from "../화면들/담소화면";
 import 꾸미기 from "styled-components";
 import 글자받기 from "./글자받기/글자받기";
+import 소통구멍갈고리 from "갈고리들/소통구멍갈고리";
+
 const 뿌리 = () => {
   const 소통구멍 = 소통구멍갈고리();
 
