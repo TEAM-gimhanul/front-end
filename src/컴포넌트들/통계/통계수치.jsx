@@ -6,10 +6,10 @@ height: 100vh;
 display: flex;
 justify-content: center;
 flex-direction: column;
-margin-right: -70vh;
+margin-left: 10vw;
 @media screen and (max-width: 700px) {
   margin: 0;
-  margin-right: 8.5vh;
+  margin-right: 9vw;
 }
 `;
 export const 막대1 = 꾸미기.div`
